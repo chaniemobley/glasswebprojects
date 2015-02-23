@@ -1,0 +1,11 @@
+.imgresponsive{
+    width:100%;
+}
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    width: 60px;
+}
