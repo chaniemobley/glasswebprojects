@@ -9,20 +9,27 @@
     <!--<link rel="stylesheet" href="css/responsive-nav.css"/>
     <script src="script/responsive-nav.js"></script>-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="script/main.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<header>
-<div class="logo"><a href="#"><img src="resources/images/glasslogo.png" alt="GWP Logo" class="img-responsive"/> </a></div>
-<nav>
-    <ul>
-        <li>How It Works</li>
-        <li>About</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
-    </ul>
-</nav>
+<header class="navigation" role="banner">
+    <div class="navigation-wrapper">
+        <a href="javascript:void(0)" class="logo">
+            <img src="resources/images/glasslogo.png" alt="Logo Image">
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">Menu</a>
+        <nav role="navigation">
+            <ul id="js-navigation-menu" class="navigation-menu show">
+                <li class="nav-link"><a href="javascript:void(0)">How It Works</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">About</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Portfolio</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+
 <div class="hero">
     <div class="hero-inner">
         <a href="" class="hero-logo"><img src="resources/images/rings.png" alt="Logo Image"></a>
@@ -33,8 +40,65 @@
         <button>Learn More</button>
     </div>
 </div>
-<footer>
+<div class="wrapper">
+    <ul class="bullets">
+        <li class="bullet three-col-bullet">
+            <div class="bullet-icon bullet-icon-1">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png
+" alt="">
+            </div>
+            <div class="bullet-content">
+                <h2>This Bullet Title</h2>
+                <p>Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+            </div>
+        </li>
+        <li class="bullet three-col-bullet">
+            <div class="bullet-icon bullet-icon-2">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt="">
+            </div>
+            <div class="bullet-content">
+                <h2>Another Bullet Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
+            </div>
+        </li>
+        <li class="bullet three-col-bullet">
+            <div class="bullet-icon bullet-icon-3">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
+            </div>
+            <div class="bullet-content">
+                <h2>Last Bullet Title</h2>
+                <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+            </div>
+        </li>
+    </ul>
+</div>
 
+
+<footer class="footer" role="contentinfo">
+    <div class="footer-logo">
+        <img src="resources/images/rings.png" alt="Logo image">
+    </div>
+    <div class="footer-links">
+        <ul>
+            <li><a href="javascript:void(0)">How It Works</a></li>
+            <li><a href="javascript:void(0)">About</a></li>
+            <li><a href="javascript:void(0)">Portfolio</a></li>
+            <li><a href="javascript:void(0)">Contact Us</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascript:void(0)"><img src="resources/images/fbicon.png" alt="GWP Facebook" /></a></li>
+            <li><a href="javascript:void(0)"><img src="resources/images/twittericon.png" alt="GWP Twitter" /></a></li>
+        </ul>
+        <ul>
+            <li><h3>Legal</h3></li>
+            <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+            <li><a href="javascript:void(0)">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
 </footer>
 </body>
 </html>
