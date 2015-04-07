@@ -74,13 +74,15 @@ header.navigation {
     text-decoration: none;
     font-weight: 100;
     color: #313030; }
+    header.navigation li.nav-link a:hover {
+      font-weight: 600; }
     @media screen and (min-width: 53.75em) {
       header.navigation li.nav-link a {
         padding-right: 2em; } }
 
 .hero {
-  background: url("../resources/images/chalkboard.jpg"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background: url("../resources/images/chalkboard.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("../resources/images/shatter.gif"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("../resources/images/shatter.gif"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
   background-color: #324766;
   background-position: top;
   padding-bottom: 3em; }
@@ -108,9 +110,8 @@ header.navigation {
       .hero .hero-inner .hero-copy h1 {
         font-size: 2em;
         margin-bottom: 0.5em;
-        font-family: 'Anton', sans-serif;
         text-transform: uppercase;
-        font-weight: 200;
+        font-weight: 800;
         letter-spacing: .05em; }
         @media screen and (min-width: 53.75em) {
           .hero .hero-inner .hero-copy h1 {
@@ -223,7 +224,7 @@ header.navigation {
     margin-bottom: 2em;
     text-align: center; }
     .footer .footer-logo img {
-      height: 3em; }
+      height: 4em; }
   .footer .footer-links {
     margin-bottom: 1.5em; }
     .footer .footer-links::after {
@@ -233,25 +234,27 @@ header.navigation {
     @media screen and (min-width: 40em) {
       .footer .footer-links {
         margin-left: 25.58941%; } }
-  .footer ul {
+  .footer section {
     margin-bottom: 3em;
     padding: 0; }
     @media screen and (min-width: 40em) {
-      .footer ul {
+      .footer section {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 23.23176%; }
-        .footer ul:last-child {
+        .footer section:last-child {
           margin-right: 0; }
-        .footer ul:nth-child(3n) {
+        .footer section:nth-child(3n) {
           margin-right: 0; }
-        .footer ul:nth-child(3n+1) {
+        .footer section:nth-child(3n+1) {
           clear: left; }
-        .footer ul::after {
+        .footer section::after {
           clear: both;
           content: "";
           display: table; } }
+    .footer section p {
+      text-align: left; }
   .footer li {
     line-height: 1.5em;
     list-style: none;
@@ -261,7 +264,11 @@ header.navigation {
         text-align: left; } }
   .footer li a {
     color: rgba(255, 255, 255, 0.4);
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100; }
+    .footer li a img {
+      margin-right: 1em; }
     .footer li a:focus, .footer li a:hover {
       color: white; }
   .footer li h3 {
