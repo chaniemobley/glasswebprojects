@@ -7,6 +7,7 @@ body{
 header.navigation {
   $large-screen: em(860) !default;
   $large-screen: $large-screen;
+  padding:1em;
 
 
 
@@ -16,6 +17,8 @@ header.navigation {
     float: right;
     margin: 0;
     padding-top: 0.5em;
+    padding-right: .5em;
+    color: #313030;
 
     @include media ($large-screen) {
       display: none;
@@ -33,7 +36,7 @@ header.navigation {
     float: left;
 
     img {
-      max-height: 2em;
+      max-height: 3em;
       padding-right: 1em;
     }
   }
@@ -43,7 +46,7 @@ header.navigation {
 
     @include media ($large-screen) {
       float: right;
-      line-height: 1.5em;
+      line-height: 3em;
       padding-top: 0.3em;
     }
   }
@@ -73,6 +76,10 @@ header.navigation {
     display: block;
     text-align: right;
     width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 100;
+    color: #313030;
 
     @include media ($large-screen) {
       background: transparent;
@@ -84,9 +91,12 @@ header.navigation {
 
   li.nav-link a {
     display: inline-block;
+    text-decoration: none;
+    font-weight: 100;
+    color: #313030;
 
     @include media ($large-screen) {
-      padding-right: 1em;
+      padding-right: 2em;
     }
   }
 }
