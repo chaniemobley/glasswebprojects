@@ -196,7 +196,7 @@ header.navigation {
   .bullets .bullet-icon-3 {
     background: #f29621; }
   .bullets .bullet-content {
-    margin-left: 4.9em;
+    margin-left: 5.25em;
     margin-bottom: 2em; }
   .bullets h2 {
     display: inline-block;
@@ -215,6 +215,15 @@ header.navigation {
     line-height: 1.5em; }
   .bullets img {
     max-width: 100%; }
+
+.statement {
+  font-size: 1.5em;
+  margin: auto;
+  text-align: center;
+  padding: 3em;
+  background-color: #96c342;
+  color: #eeeeee;
+  font-weight: 600; }
 
 .footer {
   background: #333333;

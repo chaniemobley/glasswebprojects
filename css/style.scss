@@ -215,7 +215,7 @@ header.navigation {
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size * 1.4;
+    margin-left: $icon-bullet-size * 1.5;
     margin-bottom: 2em;
   }
 
@@ -245,6 +245,15 @@ header.navigation {
   img {
     max-width: 100%;
   }
+}
+.statement{
+  font-size: 1.5em;
+  margin: auto;
+  text-align: center;
+  padding: 3em;
+  background-color: #96c342;
+  color: #eeeeee;
+  font-weight: 600;
 }
 
 .footer {
