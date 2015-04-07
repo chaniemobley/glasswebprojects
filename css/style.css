@@ -34,7 +34,7 @@ header.navigation nav {
   float: none; }
   @media screen and (min-width: 53.75em) {
     header.navigation nav {
-      float: left;
+      float: right;
       line-height: 1.5em;
       padding-top: 0.3em; } }
 header.navigation ul.navigation-menu {
@@ -68,21 +68,19 @@ header.navigation li.nav-link a {
       padding-right: 1em; } }
 
 .hero {
-  background: url("https:\a//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background: url("https:\a//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("../resources/images/chalkboard.jpg"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("../resources/images/chalkboard.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
   background-color: #324766;
   background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-bottom: 3em; }
   .hero .hero-logo img {
-    height: 4em;
+    height: 6em;
     margin-bottom: 1em; }
   .hero .hero-inner {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
-    color: white;
+    color: #eeeeee;
     margin: auto;
     padding: 3.5em;
     text-align: center; }
@@ -97,8 +95,12 @@ header.navigation li.nav-link a {
     .hero .hero-inner .hero-copy {
       text-align: center; }
       .hero .hero-inner .hero-copy h1 {
-        font-size: 1.6em;
-        margin-bottom: 0.5em; }
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: .05em; }
         @media screen and (min-width: 53.75em) {
           .hero .hero-inner .hero-copy h1 {
             font-size: 1.8em; } }
@@ -169,27 +171,31 @@ header.navigation li.nav-link a {
     flex-grow: 1;
     -ms-flex-positive: 1; }
   .bullets .bullet-icon {
-    background: #477DCA;
+    background: #30bbe5;
     border-radius: 50%;
     float: left;
     height: 3.5em;
     padding: 0.875em;
     width: 3.5em; }
   .bullets .bullet-icon-1 {
-    background: #477DCA; }
+    background: #30bbe5; }
   .bullets .bullet-icon-2 {
-    background: #47caaa; }
+    background: #96c342; }
   .bullets .bullet-icon-3 {
-    background: #a9ca47; }
+    background: #f29621; }
   .bullets .bullet-content {
     margin-left: 4.9em;
     margin-bottom: 2em; }
   .bullets h2 {
-    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
     display: inline-block;
     font-size: 1.4em;
     margin: 0 0 0.58333em 0;
-    padding-top: 0.5em; }
+    padding-top: 0.5em;
+    text-transform: uppercase;
+    font-weight: 300; }
+  .bullets ul {
+    font-weight: 100;
+    line-height: 1.5em; }
   .bullets li {
     list-style: none; }
   .bullets p {

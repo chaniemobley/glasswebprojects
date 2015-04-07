@@ -9,6 +9,7 @@ header.navigation {
   $large-screen: $large-screen;
 
 
+
   // Mobile view
   .navigation-menu-button {
     display: block;
@@ -41,7 +42,7 @@ header.navigation {
     float: none;
 
     @include media ($large-screen) {
-      float: left;
+      float: right;
       line-height: 1.5em;
       padding-top: 0.3em;
     }
@@ -95,20 +96,18 @@ header.navigation {
   $large-screen: em(860) !default;
   $hero-background-top: #7F99BE;
   $hero-background-bottom: #20392B;
-  $hero-color: white;
+  $hero-color: #eeeeee;
   $gradient-angle: 10deg;
-  $hero-image: 'https:
-//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-
+  $hero-image: '../resources/images/chalkboard.jpg';
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
   background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+//  background-repeat: no-repeat;
+//  background-size: cover;
   padding-bottom: 3em;
 
   .hero-logo img {
-    height: 4em;
+    height: 6em;
     margin-bottom: 1em;
   }
 
@@ -124,8 +123,12 @@ header.navigation {
       text-align: center;
 
       h1 {
-        font-size: 1.6em;
+        font-size: 2em;
         margin-bottom: 0.5em;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: .05em;
 
         @include media($large-screen) {
           font-size: 1.8em;
@@ -160,7 +163,7 @@ header.navigation {
 }
 .bullets {
   $base-line-height: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #30bbe5 !default;
   $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
@@ -192,11 +195,11 @@ header.navigation {
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($action-color, -50%);
+    background: #96c342;
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($action-color, -140%);
+    background: #f29621;
   }
 
   .bullet-content {
@@ -205,15 +208,21 @@ header.navigation {
   }
 
   h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
     display: inline-block;
     font-size: $icon-bullet-size / 2.5;
     margin: 0 0 ($icon-bullet-size / 6) 0;
     padding-top: $icon-bullet-size / 7;
+    text-transform: uppercase;
+    font-weight:300;
   }
 
+  ul{
+    font-weight:100;
+    line-height:1.5em;
+  }
   li {
     list-style: none;
+
   }
 
   p {
