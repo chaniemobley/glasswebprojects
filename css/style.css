@@ -81,9 +81,9 @@ header.navigation {
         padding-right: 2em; } }
 
 .hero {
-  background: url("../resources/images/shatter.gif"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background: url("../resources/images/shatter.gif"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background-color: #324766;
+  background: url("../resources/images/shatter.gif"), scroll;
+  background: url("../resources/images/shatter.gif"), scroll;
+  background-color: #313030;
   background-position: top;
   padding-bottom: 3em; }
   .hero .hero-logo img {
@@ -211,7 +211,7 @@ header.navigation {
   .bullets li {
     list-style: none; }
   .bullets p {
-    color: #333;
+    color: #313030;
     line-height: 1.5em; }
   .bullets img {
     max-width: 100%; }
@@ -225,8 +225,56 @@ header.navigation {
   color: #eeeeee;
   font-weight: 600; }
 
+#testwrapper {
+  padding: 3em;
+  background: #eeeeee; }
+  #testwrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #testwrapper .testcol {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #testwrapper .testcol:last-child {
+      margin-right: 0; }
+    #testwrapper .testcol .comment {
+      border-bottom: 1px solid rgba(49, 48, 48, 0.1);
+      display: table;
+      margin-bottom: 1.5em;
+      padding-bottom: 1em;
+      width: 100%; }
+      #testwrapper .testcol .comment .comment-image,
+      #testwrapper .testcol .comment .comment-content {
+        display: table-cell;
+        vertical-align: top; }
+      #testwrapper .testcol .comment .comment-image {
+        padding-right: 1.4em; }
+        #testwrapper .testcol .comment .comment-image > img {
+          border-radius: 3px;
+          display: block;
+          height: auto;
+          max-width: none;
+          padding: 0.2em;
+          width: 6em; }
+        .comment-reverse-order #testwrapper .testcol .comment .comment-image {
+          padding-right: 0;
+          padding-left: 10px; }
+      #testwrapper .testcol .comment .comment-content {
+        width: 100%; }
+        #testwrapper .testcol .comment .comment-content p {
+          line-height: 1.6em;
+          margin-bottom: 0.5em;
+          font-weight: 300;
+          font-size: 1.5em; }
+        #testwrapper .testcol .comment .comment-content p.comment-detail {
+          color: rgba(49, 48, 48, 0.5);
+          font-size: 0.9em;
+          font-style: italic; }
+
 .footer {
-  background: #333333;
+  background: #313030;
   padding: 3em 1.618em;
   width: 100%; }
   .footer .footer-logo {
@@ -234,6 +282,9 @@ header.navigation {
     text-align: center; }
     .footer .footer-logo img {
       height: 4em; }
+  .footer a {
+    color: #f29621;
+    text-decoration: none; }
   .footer .footer-links {
     margin-bottom: 1.5em; }
     .footer .footer-links::after {
