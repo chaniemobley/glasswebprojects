@@ -239,6 +239,14 @@ header.navigation {
     width: 48.82117%; }
     #testwrapper .testcol:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 20em) {
+      #testwrapper .testcol {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        #testwrapper .testcol:last-child {
+          margin-right: 0; } }
     #testwrapper .testcol .comment {
       border-bottom: 1px solid rgba(49, 48, 48, 0.1);
       display: table;
@@ -327,8 +335,9 @@ header.navigation {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 100; }
-    .footer li a img {
-      margin-right: 1em; }
+    .footer li a .fa {
+      margin-right: .25em;
+      display: inline; }
     .footer li a:focus, .footer li a:hover {
       color: white; }
   .footer li h3 {

@@ -261,9 +261,9 @@ header.navigation {
   background: $off-white;
   .testcol{
     @include span-columns(6);
-//    @include media($small-screen){
-//      @include span-columns(12);
-//    }
+    @include media($small-screen){
+      @include span-columns(12);
+    }
     .comment {
       $base-border-radius: 3px !default;
       $base-spacing: 1.5em !default;
@@ -280,7 +280,10 @@ header.navigation {
       margin-bottom: $base-spacing;
       padding-bottom: 1em;
       width: 100%;
-
+//      &.border{
+//        border-top: 1px solid transparentize($comment-color, 0.9);
+//        padding-top: 1em;
+//      }
       .comment-image,
       .comment-content {
         display: table-cell;
@@ -325,6 +328,8 @@ header.navigation {
 
   }
 }
+
+
 
 .footer {
   $base-spacing: 1.5em !default;
@@ -389,8 +394,9 @@ header.navigation {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 100;
-    img {
-      margin-right: 1em;
+    .fa {
+      margin-right: .25em;
+      display: inline;
     }
 
     &:focus,
