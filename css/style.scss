@@ -1,7 +1,7 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
-$small-screen: em(320) !default;
+$small-screen: em(480) !default;
 $medium-screen: em(640) !default;
 $large-screen: em(860) !default;
 $dark-gray: #313030;
@@ -9,7 +9,6 @@ $gwp-green: #96c342;
 $gwp-blue: #30bbe5;
 $gwp-orange: #f29621;
 $off-white: #eeeeee;
-
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -256,26 +255,31 @@ header.navigation {
   font-weight: 600;
 }
 #testwrapper{
+  @include outer-container();
   @include clearfix;
   padding: 3em;
-  background: $off-white;
+//  background: $off-white;
   .testcol{
-    @include span-columns(6);
-    @include media($small-screen){
+    @include span-columns(3);
+    @include media(max-width $medium-screen, 12){
+      @include span-columns(6);
+    }
+    @include media(max-width $small-screen, 12){
       @include span-columns(12);
     }
+
     .comment {
       $base-border-radius: 3px !default;
       $base-spacing: 1.5em !default;
       $base-font-color: $dark-gray !default;
       $comment-gutter: 1.4em;
       $comment-image-padding: 0.2em;
-      $comment-image-width: 6em;
+      $comment-image-height: 6em;
       $comment-color: $base-font-color;
       $comment-detail-color: transparentize($comment-color, 0.5);
       $comment-image-vert-alignment: top;
 
-      border-bottom: 1px solid transparentize($comment-color, 0.9);
+//      border-bottom: 1px solid transparentize($comment-color, 0.9);
       display: table;
       margin-bottom: $base-spacing;
       padding-bottom: 1em;
@@ -286,7 +290,7 @@ header.navigation {
 //      }
       .comment-image,
       .comment-content {
-        display: table-cell;
+        display: block;
         vertical-align: $comment-image-vert-alignment;
       }
 
@@ -296,10 +300,11 @@ header.navigation {
         > img {
           border-radius: $base-border-radius;
           display: block;
-          height: auto;
+          width: auto;
           max-width: none;
           padding: $comment-image-padding;
-          width: $comment-image-width;
+          height: $comment-image-height;
+          margin: 1em auto;
         }
 
         .comment-reverse-order & {
@@ -315,12 +320,12 @@ header.navigation {
           line-height: 1.6em;
           margin-bottom: 0.5em;
           font-weight: 300;
-          font-size: 1.5em;
+          font-size: 1em;
         }
 
         p.comment-detail {
           color: $comment-detail-color;
-          font-size: 0.9em;
+          font-size: 0.8em;
           font-style: italic;
         }
       }
@@ -397,6 +402,9 @@ header.navigation {
     .fa {
       margin-right: .25em;
       display: inline;
+      &:hover{
+        color:$gwp-green;
+      }
     }
 
     &:focus,

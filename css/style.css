@@ -226,8 +226,14 @@ header.navigation {
   font-weight: 600; }
 
 #testwrapper {
-  padding: 3em;
-  background: #eeeeee; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em; }
+  #testwrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
   #testwrapper::after {
     clear: both;
     content: "";
@@ -236,10 +242,18 @@ header.navigation {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 23.23176%; }
     #testwrapper .testcol:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 20em) {
+    @media screen and (max-width: 40em) {
+      #testwrapper .testcol {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        #testwrapper .testcol:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 30em) {
       #testwrapper .testcol {
         float: left;
         display: block;
@@ -248,24 +262,24 @@ header.navigation {
         #testwrapper .testcol:last-child {
           margin-right: 0; } }
     #testwrapper .testcol .comment {
-      border-bottom: 1px solid rgba(49, 48, 48, 0.1);
       display: table;
       margin-bottom: 1.5em;
       padding-bottom: 1em;
       width: 100%; }
       #testwrapper .testcol .comment .comment-image,
       #testwrapper .testcol .comment .comment-content {
-        display: table-cell;
+        display: block;
         vertical-align: top; }
       #testwrapper .testcol .comment .comment-image {
         padding-right: 1.4em; }
         #testwrapper .testcol .comment .comment-image > img {
           border-radius: 3px;
           display: block;
-          height: auto;
+          width: auto;
           max-width: none;
           padding: 0.2em;
-          width: 6em; }
+          height: 6em;
+          margin: 1em auto; }
         .comment-reverse-order #testwrapper .testcol .comment .comment-image {
           padding-right: 0;
           padding-left: 10px; }
@@ -275,10 +289,10 @@ header.navigation {
           line-height: 1.6em;
           margin-bottom: 0.5em;
           font-weight: 300;
-          font-size: 1.5em; }
+          font-size: 1em; }
         #testwrapper .testcol .comment .comment-content p.comment-detail {
           color: rgba(49, 48, 48, 0.5);
-          font-size: 0.9em;
+          font-size: 0.8em;
           font-style: italic; }
 
 .footer {
@@ -338,6 +352,8 @@ header.navigation {
     .footer li a .fa {
       margin-right: .25em;
       display: inline; }
+      .footer li a .fa:hover {
+        color: #96c342; }
     .footer li a:focus, .footer li a:hover {
       color: white; }
   .footer li h3 {
