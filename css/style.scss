@@ -2,7 +2,7 @@
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
 $small-screen: em(480) !default;
-$medium-screen: em(640) !default;
+$medium-screen: em(768) !default;
 $large-screen: em(860) !default;
 $dark-gray: #313030;
 $gwp-green: #96c342;
@@ -83,12 +83,11 @@ header.navigation {
     text-decoration: none;
     font-weight: 100;
     color: #313030;
-
+    margin-bottom:.5em;
     @include media($large-screen) {
       background: transparent;
       display: inline;
-      text-decoration: none;
-      width: auto;
+      text-decoration:
     }
 
   }
@@ -197,20 +196,25 @@ header.navigation {
     border-radius: 50%;
     float: left;
     height: $icon-bullet-size;
-    padding: $icon-bullet-size / 4;
     width: $icon-bullet-size;
   }
 
   .bullet-icon-1 {
     background: $gwp-blue;
+    padding-top: .8em;
+    padding-left: 1em;
   }
 
   .bullet-icon-2 {
     background: $gwp-green;
+    padding-left: 1.1em;
+    padding-top: .8em;
   }
 
   .bullet-icon-3 {
     background: $gwp-orange;
+    padding-top: .9em;
+    padding-left: .8em;
   }
 
   .bullet-content {
@@ -279,15 +283,10 @@ header.navigation {
       $comment-detail-color: transparentize($comment-color, 0.5);
       $comment-image-vert-alignment: top;
 
-//      border-bottom: 1px solid transparentize($comment-color, 0.9);
       display: table;
       margin-bottom: $base-spacing;
       padding-bottom: 1em;
       width: 100%;
-//      &.border{
-//        border-top: 1px solid transparentize($comment-color, 0.9);
-//        padding-top: 1em;
-//      }
       .comment-image,
       .comment-content {
         display: block;
