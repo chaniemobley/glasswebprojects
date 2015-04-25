@@ -12,6 +12,7 @@ $off-white: #eeeeee;
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
 header.navigation {
   $large-screen: $large-screen;
   padding: 1em;
@@ -83,11 +84,11 @@ header.navigation {
     text-decoration: none;
     font-weight: 100;
     color: #313030;
-    margin-bottom:.5em;
+    margin-bottom: .5em;
     @include media($large-screen) {
       background: transparent;
       display: inline;
-      text-decoration:
+      text-decoration: none;
     }
 
   }
@@ -249,7 +250,8 @@ header.navigation {
     max-width: 100%;
   }
 }
-.statement{
+
+.statement {
   font-size: 1.5em;
   margin: auto;
   text-align: center;
@@ -258,17 +260,18 @@ header.navigation {
   color: #eeeeee;
   font-weight: 600;
 }
-#testwrapper{
-  @include outer-container();
+
+#testwrapper {
+  @include outer-container;
   @include clearfix;
   padding: 3em;
-//  background: $off-white;
-  .testcol{
+  .testcol {
     @include span-columns(3);
-    @include media(max-width $medium-screen, 12){
+    @include media(max-width $medium-screen, 12) {
       @include span-columns(6);
+      &:nth-child(even){ margin-right:0; }
     }
-    @include media(max-width $small-screen, 12){
+    @include media(max-width $small-screen, 12) {
       @include span-columns(12);
     }
 
@@ -332,8 +335,6 @@ header.navigation {
 
   }
 }
-
-
 
 .footer {
   $base-spacing: 1.5em !default;
@@ -401,8 +402,8 @@ header.navigation {
     .fa {
       margin-right: .25em;
       display: inline;
-      &:hover{
-        color:$gwp-green;
+      &:hover {
+        color: $gwp-green;
       }
     }
 

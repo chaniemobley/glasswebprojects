@@ -68,9 +68,7 @@ header.navigation {
       header.navigation ul li.nav-link {
         background: transparent;
         display: inline;
-        text-decoration: none;
-        width: auto;
-        margin-bottom: 0; } }
+        text-decoration: none; } }
   header.navigation li.nav-link a {
     display: inline-block;
     text-decoration: none;
@@ -259,6 +257,8 @@ header.navigation {
         margin-right: 2.35765%;
         width: 48.82117%; }
         #testwrapper .testcol:last-child {
+          margin-right: 0; }
+        #testwrapper .testcol:nth-child(even) {
           margin-right: 0; } }
     @media screen and (max-width: 30em) {
       #testwrapper .testcol {
