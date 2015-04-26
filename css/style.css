@@ -9,7 +9,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  color: #313030; }
 
 header.navigation {
   padding: 1em; }
@@ -230,6 +231,12 @@ header.navigation {
   color: #eeeeee;
   font-weight: 600; }
 
+.gotProj {
+  background-color: #30bbe5; }
+  .gotProj .projContent {
+    padding: 4em;
+    text-align: center; }
+
 #testwrapper {
   max-width: 68em;
   margin-left: auto;
@@ -307,8 +314,7 @@ header.navigation {
   background: url("../resources/images/darkdesk.jpg"), scroll;
   background-color: #313030;
   background-position: top;
-  background-size: cover;
-  padding-bottom: 3em; }
+  background-size: cover; }
   #abouthero .hero-logo img {
     height: 6em;
     margin-bottom: 1em; }
@@ -371,111 +377,52 @@ header.navigation {
         cursor: not-allowed;
         opacity: 0.5; }
 
-.capWrap {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(10deg, #0A120D, #162C4C), no-repeat #162C4C scroll;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #0A120D, #162C4C), no-repeat #162C4C scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 20em;
-  width: 100%; }
-  .capWrap .device-text {
-    color: #313030;
-    padding: 2em; }
-    @media screen and (min-width: 53.75em) {
-      .capWrap .device-text {
-        float: left;
-        max-width: 50%;
-        padding: 4em; } }
-    .capWrap .device-text h4 {
-      border-bottom: 1px solid rgba(49, 48, 48, 0.3);
-      font-size: 1.5em;
-      margin: 0 0 0.5em 0;
-      padding-bottom: 0.5em; }
-    .capWrap .device-text p {
-      line-height: 1.5em;
-      margin-bottom: 1.5em; }
-    .capWrap .device-text button {
-      background-color: #477DCA;
-      border-radius: 3px;
-      border: 0;
-      color: white;
-      display: inline-block;
-      font-size: inherit;
-      font-weight: bold;
-      padding: 7px 18px;
-      text-decoration: none;
-      background-clip: padding-box;
-      padding: 0.7em 1em; }
-      .capWrap .device-text button:hover:not(:disabled) {
-        background-color: #578ad4;
-        cursor: pointer; }
-      .capWrap .device-text button:active:not(:disabled), .capWrap .device-text button:focus:not(:disabled) {
-        background-color: #3c71bb;
-        cursor: pointer; }
-      .capWrap .device-text button:disabled {
-        cursor: not-allowed;
-        opacity: 0.5; }
-  .capWrap .device {
-    display: none;
-    position: relative; }
-    @media screen and (min-width: 53.75em) {
-      .capWrap .device {
-        -webkit-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-        -moz-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-        -ms-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-        -o-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-        transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-        background: #1a1a1a;
-        border-radius: 2em;
-        box-shadow: 1px 0px #343434, 4px 0px #060606, 7px 0px black, 10px 0px black, 13px 0px black;
-        display: block;
-        float: right;
-        margin-bottom: -12em;
-        margin-right: 5em;
-        padding: 5em 0;
-        width: 14.8em;
-        z-index: 99999; }
-        .capWrap .device .screen {
-          height: 100%;
-          width: 14em;
-          background-image: url("../resources/images/development.png");
-          background-size: cover;
-          border-radius: 0.2em;
-          box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.5);
-          margin: auto; } }
-
-.capabilities {
+.side-image {
   max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3em; }
-  .capabilities::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .capabilities::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .capabilities .capImage {
-    float: left;
+  margin: auto; }
+  @media screen and (min-width: 53.75em) {
+    .side-image {
+      display: table;
+      width: 100%;
+      table-layout: fixed; } }
+  .side-image .images-wrapper {
     display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    .capabilities .capImage:last-child {
-      margin-right: 0; }
-  .capabilities .capDesc {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
-    .capabilities .capDesc:last-child {
-      margin-right: 0; }
-    .capabilities .capDesc h2 {
-      font-size: 1.3em;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding-bottom: 1.5em; }
+    vertical-align: middle;
+    min-height: 12em;
+    padding: 3em; }
+    @media screen and (min-width: 53.75em) {
+      .side-image .images-wrapper {
+        display: table-cell;
+        width: 41.66667%; } }
+    @media screen and (min-width: 48em) {
+      .side-image .images-wrapper {
+        display: table-cell;
+        width: 33.33333%; } }
+  .side-image .side-image-content {
+    display: table-cell;
+    width: 100%;
+    padding: 1em 1em 4em 1em; }
+    @media screen and (min-width: 53.75em) {
+      .side-image .side-image-content {
+        display: table-cell;
+        width: 58.33333%;
+        padding: 10em 4em 8em 4em; } }
+    @media screen and (min-width: 48em) {
+      .side-image .side-image-content {
+        display: table-cell;
+        width: 66.66667%;
+        padding: 10em 4em 8em 4em; } }
+    .side-image .side-image-content h1 {
+      margin-bottom: 0.9em;
+      font-size: 1.6em;
+      text-transform: uppercase; }
+    .side-image .side-image-content p {
+      font-size: 1.2em;
+      line-height: 1.4em; }
+    .side-image .side-image-content ul {
+      color: #313030;
+      line-height: 1.5em;
+      margin-bottom: 3em; }
 
 .footer {
   background: #313030;
