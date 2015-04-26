@@ -302,6 +302,75 @@ header.navigation {
           font-size: 0.8em;
           font-style: italic; }
 
+#abouthero {
+  background: url("../resources/images/darkdesk.jpg"), scroll;
+  background: url("../resources/images/darkdesk.jpg"), scroll;
+  background-color: #313030;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 3em; }
+  #abouthero .hero-logo img {
+    height: 6em;
+    margin-bottom: 1em; }
+  #abouthero .hero-inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eeeeee;
+    margin: auto;
+    padding: 5em;
+    text-align: center; }
+    #abouthero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #abouthero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #abouthero .hero-inner .hero-copy {
+      text-align: center; }
+      #abouthero .hero-inner .hero-copy h1 {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.2em; }
+        @media screen and (min-width: 53.75em) {
+          #abouthero .hero-inner .hero-copy h1 {
+            font-size: 1.8em;
+            line-height: 1.8em; } }
+      #abouthero .hero-inner .hero-copy p {
+        font-weight: 200;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto; }
+        @media screen and (min-width: 53.75em) {
+          #abouthero .hero-inner .hero-copy p {
+            font-size: 1.1em;
+            max-width: 40%; } }
+    #abouthero .hero-inner button {
+      background-color: #96c342;
+      border-radius: 3px;
+      border: 0;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 7px 18px;
+      text-decoration: none;
+      background-clip: padding-box;
+      padding: 0.7em 1em;
+      color: #ffffff; }
+      #abouthero .hero-inner button:hover:not(:disabled) {
+        background-color: #a2ce51;
+        cursor: pointer; }
+      #abouthero .hero-inner button:active:not(:disabled), #abouthero .hero-inner button:focus:not(:disabled) {
+        background-color: #87ae3d;
+        cursor: pointer; }
+      #abouthero .hero-inner button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+
 .footer {
   background: #313030;
   padding: 3em 1.618em;

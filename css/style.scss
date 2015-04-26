@@ -336,6 +336,66 @@ header.navigation {
   }
 }
 
+#abouthero {
+  $base-border-radius: 3px !default;
+  $hero-color: $off-white;
+  $gradient-angle: 10deg;
+  $hero-image: '../resources/images/darkdesk.jpg';
+  @include background(url($hero-image), scroll);
+  background-color: $dark-gray;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 3em;
+
+  .hero-logo img {
+    height: 6em;
+    margin-bottom: 1em;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 5em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.2em;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+          line-height: 1.8em;
+        }
+      }
+
+      p {
+        font-weight: 200;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
+      }
+    }
+
+    button {
+      @include button(flat, $gwp-green);
+      padding: 0.7em 1em;
+      color: #ffffff;
+    }
+  }
+}
+
 .footer {
   $base-spacing: 1.5em !default;
   $footer-background: $dark-gray !default;
