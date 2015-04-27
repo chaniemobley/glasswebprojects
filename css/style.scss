@@ -270,6 +270,8 @@ header.navigation {
 
 .gotProj{
   background-color: $gwp-blue;
+  text-align: center;
+  padding: 3em 0;
   .projIcon{
     display: inline-block;
     img{
@@ -513,7 +515,7 @@ header.navigation {
 .footer {
   $base-spacing: 1.5em !default;
   $footer-background: $dark-gray !default;
-  $footer-color: white;
+  $footer-color: $off-white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
@@ -555,6 +557,11 @@ header.navigation {
       text-align: left;
 
     }
+    h2{
+      color: $gwp-blue;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
 
   }
 
@@ -576,6 +583,7 @@ header.navigation {
     .fa {
       margin-right: .25em;
       display: inline;
+      color: $off-white;
       &:hover {
         color: $gwp-green;
       }

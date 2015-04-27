@@ -235,10 +235,13 @@ header.navigation {
   font-weight: 600; }
 
 .gotProj {
-  background-color: #30bbe5; }
+  background-color: #30bbe5;
+  text-align: center;
+  padding: 3em 0; }
   .gotProj .projIcon {
-    display: inline-bl img;
-      display-max-height: 6em; }
+    display: inline-block; }
+    .gotProj .projIcon img {
+      max-height: 6em; }
   .gotProj .projContent {
     display: inline-block; }
     .gotProj .projContent h2 {
@@ -510,6 +513,10 @@ header.navigation {
           display: table; } }
     .footer section p {
       text-align: left; }
+    .footer section h2 {
+      color: #30bbe5;
+      text-transform: uppercase;
+      font-weight: 400; }
   .footer li {
     line-height: 1.5em;
     list-style: none;
@@ -518,28 +525,29 @@ header.navigation {
       .footer li {
         text-align: left; } }
   .footer li a {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(238, 238, 238, 0.4);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 100; }
     .footer li a .fa {
       margin-right: .25em;
-      display: inline; }
+      display: inline;
+      color: #eeeeee; }
       .footer li a .fa:hover {
         color: #96c342; }
     .footer li a:focus, .footer li a:hover {
-      color: white; }
+      color: #eeeeee; }
   .footer li h3 {
-    color: white;
+    color: #eeeeee;
     font-size: 1em;
     font-weight: 800;
     margin-bottom: 0.4em; }
   .footer hr {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(238, 238, 238, 0.1);
     margin: 0 auto 1.5em;
     width: 12em; }
   .footer p {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(238, 238, 238, 0.4);
     font-size: 0.9em;
     line-height: 1.5em;
     margin: auto;
