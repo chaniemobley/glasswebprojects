@@ -77,6 +77,9 @@ header.navigation {
     color: #313030; }
     header.navigation li.nav-link a:hover {
       font-weight: 600; }
+    header.navigation li.nav-link a .active {
+      font-weight: 600;
+      text-decoration: underline; }
     @media screen and (min-width: 53.75em) {
       header.navigation li.nav-link a {
         padding-right: 2em; } }
@@ -233,9 +236,40 @@ header.navigation {
 
 .gotProj {
   background-color: #30bbe5; }
+  .gotProj .projIcon {
+    display: inline-bl img;
+      display-max-height: 6em; }
   .gotProj .projContent {
-    padding: 4em;
-    text-align: center; }
+    display: inline-block; }
+    .gotProj .projContent h2 {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-weight: 300;
+      padding: 1em;
+      display: block; }
+  .gotProj button {
+    background-color: #f29621;
+    border-radius: 3px;
+    border: 0;
+    color: #333333;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 7px 18px;
+    text-decoration: none;
+    background-clip: padding-box;
+    padding: 0.7em 1em;
+    color: #313030;
+    display: inline-block; }
+    .gotProj button:hover:not(:disabled) {
+      background-color: #f8a235;
+      cursor: pointer; }
+    .gotProj button:active:not(:disabled), .gotProj button:focus:not(:disabled) {
+      background-color: #e78913;
+      cursor: pointer; }
+    .gotProj button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
 
 #testwrapper {
   max-width: 68em;
@@ -401,7 +435,7 @@ header.navigation {
   .side-image .side-image-content {
     display: table-cell;
     width: 100%;
-    padding: 1em 1em 4em 1em; }
+    padding: 1em 1em 4em 4em; }
     @media screen and (min-width: 53.75em) {
       .side-image .side-image-content {
         display: table-cell;
@@ -418,11 +452,21 @@ header.navigation {
       text-transform: uppercase; }
     .side-image .side-image-content p {
       font-size: 1.2em;
-      line-height: 1.4em; }
+      line-height: 1.5em;
+      font-weight: 300; }
     .side-image .side-image-content ul {
       color: #313030;
       line-height: 1.5em;
       margin-bottom: 3em; }
+
+#team .teamintro {
+  text-align: center;
+  background: #30bbe5;
+  color: white; }
+  #team .teamintro h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 500; }
 
 .footer {
   background: #313030;

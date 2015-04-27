@@ -8,6 +8,7 @@ $dark-gray: #313030;
 $gwp-green: #96c342;
 $gwp-blue: #30bbe5;
 $gwp-orange: #f29621;
+$yellow: #FCD778;
 $off-white: #eeeeee;
 body {
   font-family: 'Open Sans', sans-serif;
@@ -102,6 +103,11 @@ header.navigation {
     &:hover {
       font-weight: 600;
     }
+    .active{
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
     @include media($large-screen) {
       padding-right: 2em;
     }
@@ -264,9 +270,27 @@ header.navigation {
 
 .gotProj{
   background-color: $gwp-blue;
+  .projIcon{
+    display: inline-block;
+    img{
+      max-height: 6em;
+    }
+  }
   .projContent{
-    padding: 4em;
-    text-align: center;
+    display: inline-block;
+    h2{
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-weight: 300;
+      padding: 1em;
+      display: block;
+    }
+  }
+  button {
+    @include button(flat, $gwp-orange);
+    padding: 0.7em 1em;
+    color: $dark-gray;
+    display: inline-block;
   }
 }
 
@@ -405,6 +429,9 @@ header.navigation {
   }
 }
 
+
+
+
 .side-image {
   $base-line-height: 1.5em !default;
   $base-link-color: $gwp-orange !default;
@@ -416,6 +443,9 @@ header.navigation {
 
   @include media($large-screen) {
     @include row(table);
+  }
+  &.rtl{
+    @include direction-context($direction: right-to-left);
   }
 
   .images-wrapper {
@@ -434,7 +464,7 @@ header.navigation {
 
   .side-image-content {
     @include span-columns(12);
-    padding: 1em 1em 4em 1em;
+    padding: 1em 1em 4em 4em;
 
     @include media($large-screen) {
       @include span-columns(7);
@@ -453,7 +483,8 @@ header.navigation {
 
     p{
       font-size: 1.2em;
-      line-height: 1.4em;
+      line-height: 1.5em;
+      font-weight: 300;
     }
     ul{
       color: $base-font-color;
@@ -465,7 +496,18 @@ header.navigation {
   @include reset-display();
 }
 
-
+#team{
+  .teamintro{
+    text-align: center;
+    background: $gwp-blue;
+    color: white;
+    h1{
+      font-size: 4em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+}
 
 
 .footer {
