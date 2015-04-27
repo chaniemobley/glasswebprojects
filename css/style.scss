@@ -1,6 +1,7 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
+//variables
 $small-screen: em(480) !default;
 $medium-screen: em(768) !default;
 $large-screen: em(860) !default;
@@ -10,9 +11,14 @@ $gwp-blue: #30bbe5;
 $gwp-orange: #f29621;
 $yellow: #FCD778;
 $off-white: #eeeeee;
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: $dark-gray;
+}
+
+.img-responsive {
+  max-width: 100%;
 }
 
 header.navigation {
@@ -172,9 +178,6 @@ header.navigation {
   }
 }
 
-.img-responsive {
-  max-width: 100%;
-}
 
 .wrapper {
   max-width: 68em;
@@ -268,34 +271,7 @@ header.navigation {
   font-weight: 600;
 }
 
-.gotProj{
-  background-color: $gwp-blue;
-  text-align: center;
-  padding: 3em 0;
-  .projIcon{
-    display: inline-block;
-    img{
-      max-height: 6em;
-    }
-  }
-  .projContent{
-    display: inline-block;
-    h2{
-      font-size: 1.5em;
-      text-transform: uppercase;
-      font-weight: 300;
-      padding: 1em;
-      display: block;
-    }
-  }
-  button {
-    @include button(flat, $gwp-orange);
-    padding: 0.7em 1em;
-    color: $dark-gray;
-    display: inline-block;
-  }
-}
-
+//home page testimonials styles
 #testwrapper {
   @include outer-container;
   @include clearfix;
@@ -371,6 +347,7 @@ header.navigation {
   }
 }
 
+//about page styles
 #abouthero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
@@ -430,9 +407,6 @@ header.navigation {
     }
   }
 }
-
-
-
 
 .side-image {
   $base-line-height: 1.5em !default;
@@ -498,19 +472,101 @@ header.navigation {
   @include reset-display();
 }
 
+//styles for team section on about page
 #team{
   .teamintro{
     text-align: center;
-    background: $gwp-blue;
-    color: white;
+    background: $dark-gray;
+    color: $off-white;
     h1{
       font-size: 4em;
       text-transform: uppercase;
       font-weight: 500;
+      display: inline-block;
+    }
+    img{
+      display:inline-block;
+      max-height: 4em;
+      vertical-align: bottom;
+    }
+    .teamwrap{
+      padding: 3em;
     }
   }
 }
 
+//footer and lower content styles below
+.lowerContent{
+  @include clearfix;
+  background-color: $gwp-blue;
+  text-align: center;
+  padding: 4em 1em 1em 1em;
+  .gotProj{
+    @include span-columns(12);
+    border-right: none;
+    margin-bottom: 4em;
+    @include media($large-screen){
+      @include span-columns(6);
+      border-right: 2px solid $dark-gray;
+      margin-bottom: none;
+    }
+    .projIcon{
+      display: inline-block;
+      img{
+        max-height: 6em;
+      }
+    }
+    .projContent{
+      display: inline-block;
+      h2{
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 1em;
+        display: block;
+      }
+    }
+    button {
+      @include button(flat, $gwp-orange);
+      padding: 0.7em 1em;
+      color: $dark-gray;
+      display: inline-block;
+    }
+  }
+
+  .signUp{
+    @include span-columns(12);
+    text-align: left;
+    padding: 0 2em;
+    @include media($large-screen){
+      @include span-columns(6);
+    }
+    form{
+      input{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1.2em;
+        padding: .5em;
+        display: inline-block;
+        &#newsEmail{
+          width: 90%;
+          margin-top: 1em;
+          @include media($large-screen){
+            width: 70%;
+            margin-top: 0;
+          }
+        }
+      }
+      button {
+        @include button(flat, $gwp-green);
+        padding: 0.7em 1em;
+        color: $dark-gray;
+        display: inline-block;
+        margin: 1em 0;
+      }
+    }
+  }
+}
 
 .footer {
   $base-spacing: 1.5em !default;
@@ -522,6 +578,7 @@ header.navigation {
   background: $footer-background;
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
+  color: $footer-color;
 
   .footer-logo {
     margin-bottom: 2em;
@@ -555,6 +612,7 @@ header.navigation {
     }
     p {
       text-align: left;
+      font-weight: 100;
 
     }
     h2{
@@ -609,7 +667,7 @@ header.navigation {
   }
 
   p {
-    color: $footer-disclaimer-color;
+    color: $footer-color;
     font-size: 0.9em;
     line-height: 1.5em;
     margin: auto;
