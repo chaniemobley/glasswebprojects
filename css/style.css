@@ -84,12 +84,13 @@ header.navigation {
     color: #313030; }
     header.navigation li.nav-link a:hover {
       font-weight: 600; }
-    header.navigation li.nav-link a .active {
+    header.navigation li.nav-link a.active {
       font-weight: 600;
-      text-decoration: underline; }
+      border-bottom: 1px solid #313030;
+      border-top: 1px solid #313030; }
     @media screen and (min-width: 53.75em) {
       header.navigation li.nav-link a {
-        padding-right: 2em; } }
+        margin-right: 2em; } }
 
 .hero {
   background: url("../resources/images/shatter.gif"), scroll;
@@ -444,6 +445,48 @@ header.navigation {
     vertical-align: bottom; }
   #team .teamintro .teamwrap {
     padding: 3em; }
+
+.serviceList {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4em; }
+  .serviceList::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .serviceList::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .serviceList .serviceItem {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 2em; }
+    .serviceList .serviceItem:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      .serviceList .serviceItem {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .serviceList .serviceItem:last-child {
+          margin-right: 0; } }
+    .serviceList .serviceItem h1 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+      margin-bottom: .5em; }
+    .serviceList .serviceItem ul {
+      padding-left: 2em;
+      line-height: 1.5em; }
+    .serviceList .serviceItem img {
+      padding: 1em; }
+      @media screen and (min-width: 53.75em) {
+        .serviceList .serviceItem img {
+          padding: 2em; } }
 
 .initstatement {
   font-size: 1.5em;
