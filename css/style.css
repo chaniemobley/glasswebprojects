@@ -445,6 +445,30 @@ header.navigation {
     vertical-align: bottom; }
   #team .teamintro .teamwrap {
     padding: 3em; }
+#team .teamGrid {
+  padding: 3em;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #team .teamGrid::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #team .teamGrid .teamMember {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #team .teamGrid .teamMember:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      #team .teamGrid .teamMember {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        #team .teamGrid .teamMember:last-child {
+          margin-right: 0; } }
 
 .serviceList {
   max-width: 68em;
