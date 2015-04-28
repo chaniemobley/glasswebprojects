@@ -21,6 +21,13 @@ body {
   max-width: 100%;
 }
 
+button{
+  a{
+    color: $off-white;
+    text-decoration: none;
+  }
+}
+
 header.navigation {
   $large-screen: $large-screen;
   padding: 1em;
@@ -174,6 +181,10 @@ header.navigation {
     button {
       @include button(flat, $action-color);
       padding: 0.7em 1em;
+      a{
+        color: $off-white;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -266,8 +277,8 @@ header.navigation {
   margin: auto;
   text-align: center;
   padding: 3em;
-  background-color: #96c342;
-  color: #eeeeee;
+  background-color: $gwp-green;
+  color: $off-white;
   font-weight: 600;
 }
 
@@ -407,7 +418,7 @@ header.navigation {
     }
   }
 }
-
+//about sustainability section
 .side-image {
   $base-line-height: 1.5em !default;
   $base-link-color: $gwp-orange !default;
@@ -419,9 +430,6 @@ header.navigation {
 
   @include media($large-screen) {
     @include row(table);
-  }
-  &.rtl{
-    @include direction-context($direction: right-to-left);
   }
 
   .images-wrapper {
@@ -450,6 +458,7 @@ header.navigation {
       @include span-columns(8);
       padding: 10em 4em 8em 4em;
     }
+    }
 
     h1 {
       margin-bottom: 0.9em;
@@ -467,7 +476,6 @@ header.navigation {
       line-height: $base-line-height;
       margin-bottom: 3em;
     }
-  }
 
   @include reset-display();
 }
@@ -494,6 +502,77 @@ header.navigation {
     }
   }
 }
+
+//intiatives page styling
+.initstatement {
+  font-size: 1.5em;
+  margin: auto;
+  text-align: center;
+  padding: 3em;
+  background-color: $gwp-orange;
+  color: $off-white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.side-image-init {
+  $base-line-height: 1.5em !default;
+  $base-link-color: $gwp-orange !default;
+  $base-font-color: $dark-gray !default;
+
+  max-width: 68em;
+  margin: auto;
+
+  @include media($large-screen) {
+    @include row(table);
+  }
+
+  .init-image-wrap {
+    display: block;
+    vertical-align: middle;
+    min-height: 12em;
+    padding: 1em;
+
+    @include media($large-screen) {
+      @include span-columns(7);
+    }
+    @include media($medium-screen){
+      @include span-columns(7);
+    }
+  }
+
+  .init-content {
+    @include span-columns(12);
+    padding: 1em 1em 4em 4em;
+
+    @include media($large-screen) {
+      @include span-columns(5);
+      padding: 2em;
+    }
+    @include media($medium-screen){
+      @include span-columns(5);
+      padding: 4em;
+    }
+  }
+
+  h1 {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-size: 1em;
+    line-height: 1.2em;
+    font-weight: 300;
+    &.smaller{
+      font-size: .7em;
+      font-style: italic;
+    }
+  }
+
+  @include reset-display();
+}
+
 
 //footer and lower content styles below
 .lowerContent{
@@ -634,7 +713,7 @@ header.navigation {
   }
 
   li a {
-    color: $footer-link-color;
+    color: $footer-color;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 100;
@@ -649,7 +728,8 @@ header.navigation {
 
     &:focus,
     &:hover {
-      color: transparentize($footer-color, 0);
+      font-weight: 300;
+      color: $gwp-orange;
     }
   }
 
