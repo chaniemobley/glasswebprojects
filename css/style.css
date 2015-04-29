@@ -25,7 +25,6 @@ header.navigation {
     display: block;
     float: right;
     margin: 0;
-    padding-top: 0.5em;
     padding-right: .5em;
     color: #313030; }
     @media screen and (min-width: 53.75em) {
@@ -40,8 +39,11 @@ header.navigation {
   header.navigation .logo {
     float: left; }
     header.navigation .logo img {
-      max-height: 3em;
+      max-height: 2em;
       padding-right: 1em; }
+      @media screen and (min-width: 53.75em) {
+        header.navigation .logo img {
+          max-height: 5em; } }
   header.navigation nav {
     float: none; }
     @media screen and (min-width: 53.75em) {
@@ -329,7 +331,7 @@ header.navigation {
     margin-right: auto;
     color: #eeeeee;
     margin: auto;
-    padding: 5em;
+    padding: 2em;
     text-align: center; }
     #abouthero .hero-inner::after {
       clear: both;
@@ -339,6 +341,9 @@ header.navigation {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (min-width: 53.75em) {
+      #abouthero .hero-inner {
+        padding: 5em; } }
     #abouthero .hero-inner .hero-copy {
       text-align: center; }
       #abouthero .hero-inner .hero-copy h1 {
@@ -458,7 +463,7 @@ header.navigation {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 48.82117%; }
     #team .teamGrid .teamMember:last-child {
       margin-right: 0; }
     @media screen and (min-width: 53.75em) {
@@ -469,6 +474,13 @@ header.navigation {
         width: 23.23176%; }
         #team .teamGrid .teamMember:last-child {
           margin-right: 0; } }
+    #team .teamGrid .teamMember h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 1em 0 .5em 0; }
+    #team .teamGrid .teamMember p {
+      font-size: .8em;
+      font-weight: 100; }
 
 .serviceList {
   max-width: 68em;
