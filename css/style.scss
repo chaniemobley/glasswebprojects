@@ -37,10 +37,11 @@ header.navigation {
     display: block;
     float: right;
     margin: 0;
-//    padding-top: 0.5em;
     padding-right: .5em;
     color: $dark-gray;
-
+    @include media($medium-screen){
+      padding-top: 0.5em;
+    }
     @include media($large-screen) {
       display: none;
     }
@@ -59,7 +60,10 @@ header.navigation {
       max-height: 2em;
       padding-right: 1em;
       @include media($large-screen){
-        max-height: 5em;
+        max-height: 3em;
+      }
+      @include media($medium-screen){
+        max-height: 3em;
       }
     }
   }
@@ -70,7 +74,7 @@ header.navigation {
     @include media($large-screen) {
       float: right;
       line-height: 3em;
-      padding-top: 0.3em;
+      padding-top: 0.1em;
     }
   }
 
