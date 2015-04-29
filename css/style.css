@@ -94,8 +94,10 @@ header.navigation {
       font-weight: 600; }
     header.navigation li.nav-link a.active {
       font-weight: 600;
-      border-bottom: 1px solid #313030;
-      border-top: 1px solid #313030; }
+      border-bottom: 1px solid #313030; }
+      @media screen and (min-width: 53.75em) {
+        header.navigation li.nav-link a.active {
+          border-top: 1px solid #313030; } }
     @media screen and (min-width: 53.75em) {
       header.navigation li.nav-link a {
         margin-right: 2em; } }
@@ -446,7 +448,8 @@ header.navigation {
   background: #313030;
   color: #eeeeee; }
   #team .teamintro h1 {
-    font-size: 4em;
+    font-size: 2em;
+    line-height: 2em;
     text-transform: uppercase;
     font-weight: 500;
     display: inline-block; }
@@ -469,17 +472,46 @@ header.navigation {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 48.82117%;
+    padding: .5em; }
     #team .teamGrid .teamMember:last-child {
       margin-right: 0; }
+    #team .teamGrid .teamMember:nth-child(2n) {
+      margin-right: 0; }
+    #team .teamGrid .teamMember:nth-child(2n+1) {
+      clear: left; }
+    @media screen and (min-width: 48em) {
+      #team .teamGrid .teamMember {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        #team .teamGrid .teamMember:nth-child(2n) {
+          margin-right: 2.35765%; }
+        #team .teamGrid .teamMember:nth-child(2n+1) {
+          clear: none; }
+        #team .teamGrid .teamMember:last-child {
+          margin-right: 0; }
+        #team .teamGrid .teamMember:nth-child(3n) {
+          margin-right: 0; }
+        #team .teamGrid .teamMember:nth-child(3n+1) {
+          clear: left; } }
     @media screen and (min-width: 53.75em) {
       #team .teamGrid .teamMember {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 23.23176%; }
+        #team .teamGrid .teamMember:nth-child(3n) {
+          margin-right: 2.35765%; }
+        #team .teamGrid .teamMember:nth-child(3n+1) {
+          clear: none; }
         #team .teamGrid .teamMember:last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+        #team .teamGrid .teamMember:nth-child(4n) {
+          margin-right: 0; }
+        #team .teamGrid .teamMember:nth-child(4n+1) {
+          clear: left; } }
     #team .teamGrid .teamMember h3 {
       text-transform: uppercase;
       font-weight: 400;
@@ -492,7 +524,7 @@ header.navigation {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 4em; }
+  padding: 0 3em; }
   .serviceList::after {
     clear: both;
     content: "";
@@ -529,6 +561,55 @@ header.navigation {
       @media screen and (min-width: 53.75em) {
         .serviceList .serviceItem img {
           padding: 2em; } }
+
+#serviceHero {
+  background: url("../resources/images/darkdesk2.jpg"), scroll;
+  background: url("../resources/images/darkdesk2.jpg"), scroll;
+  background-color: #313030;
+  background-position: top;
+  background-size: cover; }
+  #serviceHero .hero-logo img {
+    height: 6em;
+    margin-bottom: 1em; }
+  #serviceHero .hero-inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eeeeee;
+    margin: auto;
+    padding: 2em;
+    text-align: center; }
+    #serviceHero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #serviceHero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 53.75em) {
+      #serviceHero .hero-inner {
+        padding: 5em; } }
+    #serviceHero .hero-inner .hero-copy {
+      text-align: center; }
+      #serviceHero .hero-inner .hero-copy h1 {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.2em; }
+        @media screen and (min-width: 53.75em) {
+          #serviceHero .hero-inner .hero-copy h1 {
+            font-size: 1.8em;
+            line-height: 1.8em; } }
+      #serviceHero .hero-inner .hero-copy p {
+        font-weight: 200;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto; }
+        @media screen and (min-width: 53.75em) {
+          #serviceHero .hero-inner .hero-copy p {
+            font-size: 1.1em;
+            max-width: 40%; } }
 
 .initstatement {
   font-size: 1.5em;

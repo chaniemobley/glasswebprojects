@@ -1,6 +1,13 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
+// ------------------------------------------------------------
+// Omega Reset
+// ------------------------------------------------------------
 
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
 //variables
 $small-screen: em(480) !default;
 $medium-screen: em(768) !default;
@@ -127,7 +134,9 @@ header.navigation {
     &.active{
       font-weight: 600;
       border-bottom: 1px solid $dark-gray;
-      border-top: 1px solid $dark-gray;
+      @include media($large-screen){
+        border-top: 1px solid $dark-gray;
+      }
     }
 
 
@@ -499,10 +508,15 @@ header.navigation {
     background: $dark-gray;
     color: $off-white;
     h1{
-      font-size: 4em;
+      font-size: 2em;
+      line-height: 2em;
       text-transform: uppercase;
       font-weight: 500;
       display: inline-block;
+//      @include media($large-screen){
+//        font-size: 4em;
+//        line-height: 4em;
+//      }
     }
     img{
       display:inline-block;
@@ -518,8 +532,17 @@ header.navigation {
     @include outer-container;
     .teamMember{
       @include span-columns(6);
+      @include omega(2n);
+      padding: .5em;
+      @include media($medium-screen){
+        @include omega-reset(2n);
+        @include span-columns(4);
+        @include omega(3n);
+      }
       @include media($large-screen){
+        @include omega-reset(3n);
         @include span-columns(3);
+        @include omega(4n);
       }
       h3{
         text-transform: uppercase;
@@ -538,7 +561,7 @@ header.navigation {
 .serviceList{
   @include outer-container;
   @include clearfix;
-  padding: 4em;
+  padding: 0 3em;
   .serviceItem{
     @include span-columns(12);
     @include media($large-screen){
@@ -558,6 +581,60 @@ header.navigation {
       padding: 1em;
       @include media($large-screen){
         padding: 2em;
+      }
+    }
+  }
+}
+#serviceHero{
+  $base-border-radius: 3px !default;
+  $hero-color: $off-white;
+  $gradient-angle: 10deg;
+  $hero-image: '../resources/images/darkdesk2.jpg';
+  @include background(url($hero-image), scroll);
+  background-color: $dark-gray;
+  background-position: top;
+  background-size: cover;
+
+  .hero-logo img {
+    height: 6em;
+    margin-bottom: 1em;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    @include media($large-screen){
+      padding: 5em;
+    }
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.2em;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+          line-height: 1.8em;
+        }
+      }
+
+      p {
+        font-weight: 200;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
       }
     }
   }
