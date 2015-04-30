@@ -147,10 +147,10 @@ header.navigation {
             font-size: 1.1em;
             max-width: 40%; } }
     .hero .hero-inner button {
-      background-color: #477DCA;
+      background-color: #30bbe5;
       border-radius: 3px;
       border: 0;
-      color: white;
+      color: #333333;
       display: inline-block;
       font-size: inherit;
       font-weight: bold;
@@ -159,10 +159,10 @@ header.navigation {
       background-clip: padding-box;
       padding: 0.7em 1em; }
       .hero .hero-inner button:hover:not(:disabled) {
-        background-color: #578ad4;
+        background-color: #43c5ec;
         cursor: pointer; }
       .hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
-        background-color: #3c71bb;
+        background-color: #21afda;
         cursor: pointer; }
       .hero .hero-inner button:disabled {
         cursor: not-allowed;
@@ -683,7 +683,7 @@ header.navigation {
   font-size: 1.5em;
   margin: auto;
   text-align: center;
-  padding: em;
+  padding: 2em;
   color: #313030;
   font-weight: 600;
   text-transform: uppercase; }
@@ -744,6 +744,120 @@ header.navigation {
     content: "";
     display: table; }
 
+#contactHero {
+  background: url("../resources/images/penpaper.jpg"), scroll;
+  background: url("../resources/images/penpaper.jpg"), scroll;
+  background-color: #313030;
+  background-position: center;
+  background-size: cover; }
+  #contactHero .hero-inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eeeeee;
+    margin: auto;
+    padding: 2em;
+    text-align: center; }
+    #contactHero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #contactHero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 53.75em) {
+      #contactHero .hero-inner {
+        padding: 6em; } }
+    #contactHero .hero-inner .hero-copy {
+      text-align: center; }
+      #contactHero .hero-inner .hero-copy h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1.7em; }
+        @media screen and (min-width: 53.75em) {
+          #contactHero .hero-inner .hero-copy h1 {
+            font-size: 2em;
+            line-height: 2em; } }
+      #contactHero .hero-inner .hero-copy h2 {
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.5em; }
+        @media screen and (min-width: 53.75em) {
+          #contactHero .hero-inner .hero-copy h2 {
+            font-size: 1.5em;
+            line-height: 1.7em; } }
+    #contactHero .hero-inner button {
+      background-color: #f29621;
+      border-radius: 3px;
+      border: 0;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 7px 18px;
+      text-decoration: none;
+      background-clip: padding-box;
+      padding: 0.7em 1em;
+      color: #ffffff; }
+      #contactHero .hero-inner button:hover:not(:disabled) {
+        background-color: #f8a235;
+        cursor: pointer; }
+      #contactHero .hero-inner button:active:not(:disabled), #contactHero .hero-inner button:focus:not(:disabled) {
+        background-color: #e78913;
+        cursor: pointer; }
+      #contactHero .hero-inner button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+
+#contactForm .form {
+  max-width: 100%;
+  min-width: 25%;
+  border-width: 0px;
+  border-color: #CCCCCC;
+  border-radius: 4px;
+  border-style: solid;
+  color: #313030;
+  font-size: 1em;
+  margin: 0px;
+  background-color: #FFFFFF;
+  padding: 20px; }
+  #contactForm .form h1 {
+    font-size: 3em;
+    color: #313030;
+    margin-bottom: 1em;
+    text-transform: uppercase; }
+  #contactForm .form label {
+    color: #313030;
+    font-size: 1em;
+    display: block;
+    margin-bottom: .5em; }
+  #contactForm .form input[type=radio], #contactForm .form input[type=checkbox] {
+    margin: 10px;
+    width: 13px; }
+  #contactForm .form input[type=submit] {
+    width: 25%;
+    background-color: #CCCCCC;
+    color: #222222; }
+  #contactForm .form div {
+    display: block; }
+  #contactForm .form input, #contactForm .form form textarea, #contactForm .form form select {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 3px;
+    padding: .3em;
+    width: 100%;
+    font-size: 1.2em; }
+  #contactForm .form textarea {
+    height: 10em;
+    width: 100%; }
+  #contactForm .form .field {
+    margin-bottom: 5px; }
+
 .lowerContent {
   background-color: #30bbe5;
   text-align: center;
@@ -795,7 +909,6 @@ header.navigation {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em;
-      color: #313030;
       display: inline-block; }
       .lowerContent .gotProj button:hover:not(:disabled) {
         background-color: #f8a235;
@@ -806,6 +919,8 @@ header.navigation {
       .lowerContent .gotProj button:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
+      .lowerContent .gotProj button a {
+        color: #313030; }
   .lowerContent .signUp {
     float: left;
     display: block;

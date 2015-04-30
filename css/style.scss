@@ -149,7 +149,7 @@ header.navigation {
 
 .hero {
   $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
+  $action-color: $gwp-blue;
   $hero-color: $off-white;
   $gradient-angle: 10deg;
   $hero-image: '../resources/images/shatter.gif';
@@ -766,6 +766,115 @@ header.navigation {
   }
 }
 
+//contact page
+#contactHero{
+  $base-border-radius: 3px !default;
+  $hero-color: $off-white;
+  $gradient-angle: 10deg;
+  $hero-image: '../resources/images/penpaper.jpg';
+  @include background(url($hero-image), scroll);
+  background-color: $dark-gray;
+  background-position: center;
+  background-size: cover;
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    @include media($large-screen){
+      padding: 6em;
+    }
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1.7em;
+        @include media($large-screen) {
+          font-size: 2em;
+          line-height: 2em;
+        }
+      }
+      h2{
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.5em;
+        @include media($large-screen) {
+          font-size: 1.5em;
+          line-height: 1.7em;
+        }
+      }
+    }
+    button {
+      @include button(flat, $gwp-orange);
+      padding: 0.7em 1em;
+      color: #ffffff;
+    }
+  }
+}
+#contactForm{
+  .form{
+    max-width: 100%;
+    min-width: 25%;
+    border-width: 0px;
+    border-color: #CCCCCC;
+    border-radius: 4px;
+    border-style: solid;
+    color: $dark-gray;
+    font-size: 1em;
+    margin: 0px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    h1{
+      font-size: 3em;
+      color: $dark-gray;
+      margin-bottom: 1em;
+      text-transform: uppercase;
+    }
+    label{
+      color: $dark-gray;
+      font-size: 1em;
+      display: block;
+      margin-bottom: .5em;
+    }
+    input[type=radio], input[type=checkbox]{
+      margin: 10px;
+      width: 13px;
+    }
+    input[type=submit]{
+      width: 25%;
+      background-color: #CCCCCC;
+      color: #222222;
+    }
+    div{
+      display: block;
+    }
+    input, form textarea, form select{
+      border-width: 1px;
+      border-style: solid;
+      border-color: #666666;
+      border-radius: 3px;
+      padding: .3em;
+      width: 100%;
+      font-size: 1.2em;
+    }
+    textarea{
+      height: 10em;
+      width: 100%;
+    }
+    .field{
+      margin-bottom: 5px;
+    }
+
+  }
+}
+
 //footer and lower content styles below
 .lowerContent{
   @include clearfix;
@@ -800,8 +909,10 @@ header.navigation {
     button {
       @include button(flat, $gwp-orange);
       padding: 0.7em 1em;
-      color: $dark-gray;
       display: inline-block;
+      a{
+        color: $dark-gray;
+      }
     }
   }
 
