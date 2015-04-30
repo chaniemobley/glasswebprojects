@@ -20,7 +20,8 @@ button a {
   text-decoration: none; }
 
 header.navigation {
-  padding: 1em; }
+  padding: 1em;
+  margin-bottom: 1em; }
   header.navigation .navigation-menu-button {
     display: block;
     float: right;
@@ -813,50 +814,88 @@ header.navigation {
         cursor: not-allowed;
         opacity: 0.5; }
 
-#contactForm .form {
-  max-width: 100%;
-  min-width: 25%;
-  border-width: 0px;
-  border-color: #CCCCCC;
-  border-radius: 4px;
-  border-style: solid;
-  color: #313030;
-  font-size: 1em;
-  margin: 0px;
-  background-color: #FFFFFF;
-  padding: 20px; }
-  #contactForm .form h1 {
-    font-size: 3em;
-    color: #313030;
-    margin-bottom: 1em;
-    text-transform: uppercase; }
-  #contactForm .form label {
-    color: #313030;
-    font-size: 1em;
+#formContainer {
+  background-color: #eeeeee;
+  padding: 2em 1em; }
+  #formContainer::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 53.75em) {
+    #formContainer {
+      padding: 2em 6em; } }
+  #formContainer #contactForm {
+    float: left;
     display: block;
-    margin-bottom: .5em; }
-  #contactForm .form input[type=radio], #contactForm .form input[type=checkbox] {
-    margin: 10px;
-    width: 13px; }
-  #contactForm .form input[type=submit] {
-    width: 25%;
-    background-color: #CCCCCC;
-    color: #222222; }
-  #contactForm .form div {
-    display: block; }
-  #contactForm .form input, #contactForm .form form textarea, #contactForm .form form select {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #666666;
-    border-radius: 3px;
-    padding: .3em;
+    margin-right: 2.35765%;
     width: 100%;
-    font-size: 1.2em; }
-  #contactForm .form textarea {
-    height: 10em;
-    width: 100%; }
-  #contactForm .form .field {
-    margin-bottom: 5px; }
+    padding: 2em; }
+    #formContainer #contactForm:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      #formContainer #contactForm {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%; }
+        #formContainer #contactForm:last-child {
+          margin-right: 0; } }
+    #formContainer #contactForm .form {
+      color: #313030;
+      font-size: 1em; }
+      #formContainer #contactForm .form h1 {
+        font-size: 3em;
+        color: #313030;
+        margin-bottom: 1em;
+        text-transform: uppercase; }
+      #formContainer #contactForm .form label {
+        color: #313030;
+        font-size: 1em;
+        display: block;
+        margin-bottom: .5em; }
+      #formContainer #contactForm .form input[type=radio], #formContainer #contactForm .form input[type=checkbox] {
+        margin: 10px;
+        width: 13px; }
+      #formContainer #contactForm .form div {
+        display: block; }
+      #formContainer #contactForm .form input, #formContainer #contactForm .form form textarea, #formContainer #contactForm .form form select {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #666666;
+        border-radius: 3px;
+        padding: .3em;
+        width: 100%;
+        font-size: 1.2em; }
+      #formContainer #contactForm .form textarea {
+        height: 10em;
+        width: 100%; }
+      #formContainer #contactForm .form .field {
+        margin-bottom: 5px; }
+        #formContainer #contactForm .form .field button {
+          background-color: #30bbe5;
+          border-radius: 3px;
+          border: 0;
+          color: #333333;
+          display: inline-block;
+          font-size: inherit;
+          font-weight: bold;
+          padding: 7px 18px;
+          text-decoration: none;
+          background-clip: padding-box;
+          padding: 0.7em 1em;
+          display: inline-block;
+          margin-top: .5em; }
+          #formContainer #contactForm .form .field button:hover:not(:disabled) {
+            background-color: #43c5ec;
+            cursor: pointer; }
+          #formContainer #contactForm .form .field button:active:not(:disabled), #formContainer #contactForm .form .field button:focus:not(:disabled) {
+            background-color: #21afda;
+            cursor: pointer; }
+          #formContainer #contactForm .form .field button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5; }
+          #formContainer #contactForm .form .field button a {
+            color: #313030; }
 
 .lowerContent {
   background-color: #30bbe5;

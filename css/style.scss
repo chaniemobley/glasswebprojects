@@ -1,13 +1,19 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
+
 // ------------------------------------------------------------
 // Omega Reset
 // ------------------------------------------------------------
 
 @mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &:nth-child(#{$nth}+1) { clear: none }
+  &:nth-child(#{$nth}) {
+    margin-right: flex-gutter();
+  }
+  &:nth-child(#{$nth}+1) {
+    clear: none
+  }
 }
+
 //variables
 $small-screen: em(480) !default;
 $medium-screen: em(768) !default;
@@ -29,8 +35,8 @@ body {
   max-width: 100%;
 }
 
-button{
-  a{
+button {
+  a {
     color: $off-white;
     text-decoration: none;
   }
@@ -39,6 +45,7 @@ button{
 header.navigation {
   $large-screen: $large-screen;
   padding: 1em;
+  margin-bottom: 1em;
 
   // Mobile view
   .navigation-menu-button {
@@ -47,7 +54,7 @@ header.navigation {
     margin: 0;
     padding-right: .5em;
     color: $dark-gray;
-    @include media($medium-screen){
+    @include media($medium-screen) {
       padding-top: 0.5em;
     }
     @include media($large-screen) {
@@ -67,10 +74,10 @@ header.navigation {
     img {
       max-height: 2em;
       padding-right: 1em;
-      @include media($large-screen){
+      @include media($large-screen) {
         max-height: 3em;
       }
-      @include media($medium-screen){
+      @include media($medium-screen) {
         max-height: 3em;
       }
     }
@@ -132,14 +139,13 @@ header.navigation {
     &:hover {
       font-weight: 600;
     }
-    &.active{
+    &.active {
       font-weight: 600;
       border-bottom: 1px solid $dark-gray;
-      @include media($large-screen){
+      @include media($large-screen) {
         border-top: 1px solid $dark-gray;
       }
     }
-
 
     @include media($large-screen) {
       margin-right: 2em;
@@ -201,7 +207,7 @@ header.navigation {
     button {
       @include button(flat, $action-color);
       padding: 0.7em 1em;
-      a{
+      a {
         color: $off-white;
         text-decoration: none;
       }
@@ -209,13 +215,12 @@ header.navigation {
   }
 }
 
-
 .wrapper {
   max-width: 68em;
   margin: auto;
   padding: 1em;
 }
-
+//home page styling
 .bullets {
   $base-line-height: 1.5em !default;
   $base-font-color: $dark-gray !default;
@@ -291,7 +296,6 @@ header.navigation {
     max-width: 100%;
   }
 }
-
 .statement {
   font-size: 1.5em;
   margin: auto;
@@ -301,8 +305,6 @@ header.navigation {
   color: $off-white;
   font-weight: 600;
 }
-
-//home page testimonials styles
 #testwrapper {
   @include outer-container;
   @include clearfix;
@@ -311,7 +313,9 @@ header.navigation {
     @include span-columns(3);
     @include media(max-width $medium-screen, 12) {
       @include span-columns(6);
-      &:nth-child(even){ margin-right:0; }
+      &:nth-child(even) {
+        margin-right: 0;
+      }
     }
     @include media(max-width $small-screen, 12) {
       @include span-columns(12);
@@ -388,7 +392,7 @@ header.navigation {
   background-color: $dark-gray;
   background-position: top;
   background-size: cover;
-//  padding-bottom: 3em;
+  //  padding-bottom: 3em;
 
   .hero-logo img {
     height: 6em;
@@ -402,7 +406,7 @@ header.navigation {
     margin: auto;
     padding: 2em;
     text-align: center;
-    @include media($large-screen){
+    @include media($large-screen) {
       padding: 5em;
     }
     .hero-copy {
@@ -440,7 +444,6 @@ header.navigation {
     }
   }
 }
-//about sustainability section
 .side-image {
   $base-line-height: 1.5em !default;
   $base-link-color: $gwp-orange !default;
@@ -463,7 +466,7 @@ header.navigation {
     @include media($large-screen) {
       @include span-columns(5);
     }
-    @include media($medium-screen){
+    @include media($medium-screen) {
       @include span-columns(4);
     }
   }
@@ -476,81 +479,81 @@ header.navigation {
       @include span-columns(7);
       padding: 10em 4em 8em 4em;
     }
-    @include media($medium-screen){
+    @include media($medium-screen) {
       @include span-columns(8);
       padding: 10em 4em 8em 4em;
     }
-    }
+  }
 
-    h1 {
-      margin-bottom: 0.9em;
-      font-size: 1.6em;
-      text-transform: uppercase;
-    }
+  h1 {
+    margin-bottom: 0.9em;
+    font-size: 1.6em;
+    text-transform: uppercase;
+  }
 
-    p{
-      font-size: 1.2em;
-      line-height: 1.5em;
-      font-weight: 300;
-    }
-    ul{
-      color: $base-font-color;
-      line-height: $base-line-height;
-      margin-bottom: 3em;
-    }
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 300;
+  }
+  ul {
+    color: $base-font-color;
+    line-height: $base-line-height;
+    margin-bottom: 3em;
+  }
 
   @include reset-display();
 }
 
 //styles for team section on about page
-#team{
-  .teamintro{
+#team {
+  .teamintro {
     text-align: center;
     background: $dark-gray;
     color: $off-white;
-    h1{
+    h1 {
       font-size: 2em;
       line-height: 2em;
       text-transform: uppercase;
       font-weight: 500;
       display: inline-block;
-//      @include media($large-screen){
-//        font-size: 4em;
-//        line-height: 4em;
-//      }
+      //      @include media($large-screen){
+      //        font-size: 4em;
+      //        line-height: 4em;
+      //      }
     }
-    img{
-      display:inline-block;
+    img {
+      display: inline-block;
       max-height: 4em;
       vertical-align: bottom;
     }
-    .teamwrap{
+    .teamwrap {
       padding: 3em;
     }
   }
-  .teamGrid{
+  .teamGrid {
     padding: 3em;
     @include outer-container;
-    .teamMember{
+    .teamMember {
       @include span-columns(6);
       @include omega(2n);
       padding: .5em;
-      @include media($medium-screen){
+      @include media($medium-screen) {
         @include omega-reset(2n);
         @include span-columns(4);
         @include omega(3n);
       }
-      @include media($large-screen){
+      @include media($large-screen) {
         @include omega-reset(3n);
         @include span-columns(3);
         @include omega(4n);
       }
-      h3{
+      h3 {
         text-transform: uppercase;
         font-weight: 400;
         padding: 1em 0 .5em 0;
       }
-      p{
+      p {
         font-size: .8em;
         font-weight: 100;
       }
@@ -559,34 +562,35 @@ header.navigation {
 }
 
 //services page
-.serviceList{
+.serviceList {
   @include outer-container;
   @include clearfix;
   padding: 0 3em;
-  .serviceItem{
+  .serviceItem {
     @include span-columns(12);
-    @include media($large-screen){
+    @include media($large-screen) {
       @include span-columns(4);
     }
     padding: 2em;
-    h1{
+    h1 {
       text-transform: uppercase;
       font-size: 1.5em;
       margin-bottom: .5em;
     }
-    ul{
+    ul {
       padding-left: 2em;
       line-height: 1.5em;
     }
-    img{
+    img {
       padding: 1em;
-      @include media($large-screen){
+      @include media($large-screen) {
         padding: 2em;
       }
     }
   }
 }
-#serviceHero{
+
+#serviceHero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
   $gradient-angle: 10deg;
@@ -608,7 +612,7 @@ header.navigation {
     margin: auto;
     padding: 2em;
     text-align: center;
-    @include media($large-screen){
+    @include media($large-screen) {
       padding: 6em;
     }
     .hero-copy {
@@ -641,7 +645,7 @@ header.navigation {
 }
 
 //intiatives page styling
-#initHero{
+#initHero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
   $gradient-angle: 10deg;
@@ -657,7 +661,7 @@ header.navigation {
     margin: auto;
     padding: 2em;
     text-align: center;
-    @include media($large-screen){
+    @include media($large-screen) {
       padding: 6em;
     }
     .hero-copy {
@@ -674,7 +678,7 @@ header.navigation {
           line-height: 2em;
         }
       }
-      h2{
+      h2 {
         font-size: 1em;
         font-weight: 300;
         letter-spacing: .05em;
@@ -722,7 +726,7 @@ header.navigation {
     @include media($large-screen) {
       @include span-columns(7);
     }
-    @include media($medium-screen){
+    @include media($medium-screen) {
       @include span-columns(7);
     }
   }
@@ -735,7 +739,7 @@ header.navigation {
       @include span-columns(5);
       padding: 2em;
     }
-    @include media($medium-screen){
+    @include media($medium-screen) {
       @include span-columns(5);
       padding: 4em;
     }
@@ -747,11 +751,11 @@ header.navigation {
     text-transform: uppercase;
   }
 
-  p{
+  p {
     font-size: 1em;
     line-height: 1.2em;
     font-weight: 300;
-    &.smaller{
+    &.smaller {
       font-size: .7em;
       font-style: italic;
     }
@@ -759,15 +763,15 @@ header.navigation {
 
   @include reset-display();
 }
-.cstGrid{
+.cstGrid {
   @include outer-container;
-  .cstItem{
+  .cstItem {
 
   }
 }
 
 //contact page
-#contactHero{
+#contactHero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
   $gradient-angle: 10deg;
@@ -783,7 +787,7 @@ header.navigation {
     margin: auto;
     padding: 2em;
     text-align: center;
-    @include media($large-screen){
+    @include media($large-screen) {
       padding: 6em;
     }
     .hero-copy {
@@ -800,7 +804,7 @@ header.navigation {
           line-height: 2em;
         }
       }
-      h2{
+      h2 {
         font-size: 1em;
         font-weight: 300;
         letter-spacing: .05em;
@@ -818,87 +822,95 @@ header.navigation {
     }
   }
 }
-#contactForm{
-  .form{
-    max-width: 100%;
-    min-width: 25%;
-    border-width: 0px;
-    border-color: #CCCCCC;
-    border-radius: 4px;
-    border-style: solid;
-    color: $dark-gray;
-    font-size: 1em;
-    margin: 0px;
-    background-color: #FFFFFF;
-    padding: 20px;
-    h1{
-      font-size: 3em;
-      color: $dark-gray;
-      margin-bottom: 1em;
-      text-transform: uppercase;
+#formContainer {
+  @include clearfix;
+  background-color: $off-white;
+  padding: 2em 1em;
+  @include media($large-screen){
+    padding: 2em 6em;
+  }
+  #contactForm {
+    @include span-columns(12);
+    padding: 2em;
+    @include media($large-screen) {
+      @include span-columns(8);
     }
-    label{
+    .form {
       color: $dark-gray;
       font-size: 1em;
-      display: block;
-      margin-bottom: .5em;
-    }
-    input[type=radio], input[type=checkbox]{
-      margin: 10px;
-      width: 13px;
-    }
-    input[type=submit]{
-      width: 25%;
-      background-color: #CCCCCC;
-      color: #222222;
-    }
-    div{
-      display: block;
-    }
-    input, form textarea, form select{
-      border-width: 1px;
-      border-style: solid;
-      border-color: #666666;
-      border-radius: 3px;
-      padding: .3em;
-      width: 100%;
-      font-size: 1.2em;
-    }
-    textarea{
-      height: 10em;
-      width: 100%;
-    }
-    .field{
-      margin-bottom: 5px;
-    }
+      h1 {
+        font-size: 3em;
+        color: $dark-gray;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+      }
+      label {
+        color: $dark-gray;
+        font-size: 1em;
+        display: block;
+        margin-bottom: .5em;
+      }
+      input[type=radio], input[type=checkbox] {
+        margin: 10px;
+        width: 13px;
+      }
+      div {
+        display: block;
+      }
+      input, form textarea, form select {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #666666;
+        border-radius: 3px;
+        padding: .3em;
+        width: 100%;
+        font-size: 1.2em;
+      }
+      textarea {
+        height: 10em;
+        width: 100%;
+      }
+      .field {
+        margin-bottom: 5px;
+        button {
+          @include button(flat, $gwp-blue);
+          padding: 0.7em 1em;
+          display: inline-block;
+          margin-top: .5em;
+          a {
+            color: $dark-gray;
+          }
+        }
+      }
 
+    }
   }
 }
 
 //footer and lower content styles below
-.lowerContent{
+.lowerContent {
   @include clearfix;
   background-color: $gwp-blue;
   text-align: center;
   padding: 4em 1em 1em 1em;
-  .gotProj{
+  .gotProj {
     @include span-columns(12);
     border-right: none;
     margin-bottom: 4em;
-    @include media($large-screen){
+    @include media($large-screen) {
       @include span-columns(6);
       border-right: 2px solid $dark-gray;
       margin-bottom: none;
     }
-    .projIcon{
+    .projIcon {
       display: inline-block;
-      img{
+      img {
         max-height: 6em;
       }
     }
-    .projContent{
+    .projContent {
       display: inline-block;
-      h2{
+      h2 {
         font-size: 1.5em;
         text-transform: uppercase;
         font-weight: 300;
@@ -910,30 +922,30 @@ header.navigation {
       @include button(flat, $gwp-orange);
       padding: 0.7em 1em;
       display: inline-block;
-      a{
+      a {
         color: $dark-gray;
       }
     }
   }
 
-  .signUp{
+  .signUp {
     @include span-columns(12);
     text-align: left;
     padding: 0 2em;
-    @include media($large-screen){
+    @include media($large-screen) {
       @include span-columns(6);
     }
-    form{
-      input{
+    form {
+      input {
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 1.2em;
         padding: .5em;
         display: inline-block;
-        &#newsEmail{
+        &#newsEmail {
           width: 90%;
           margin-top: 1em;
-          @include media($large-screen){
+          @include media($large-screen) {
             width: 70%;
             margin-top: 0;
           }
@@ -997,7 +1009,7 @@ header.navigation {
       font-weight: 100;
 
     }
-    h2{
+    h2 {
       color: $gwp-blue;
       text-transform: uppercase;
       font-weight: 400;
