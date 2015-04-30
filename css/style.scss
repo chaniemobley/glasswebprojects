@@ -16,6 +16,7 @@ $dark-gray: #313030;
 $gwp-green: #96c342;
 $gwp-blue: #30bbe5;
 $gwp-orange: #f29621;
+$gwp-brown: #CB9471;
 $yellow: #FCD778;
 $off-white: #eeeeee;
 
@@ -589,7 +590,7 @@ header.navigation {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
   $gradient-angle: 10deg;
-  $hero-image: '../resources/images/darkdesk2.jpg';
+  $hero-image: '../resources/images/altdarkdesk2.jpg';
   @include background(url($hero-image), scroll);
   background-color: $dark-gray;
   background-position: top;
@@ -608,21 +609,20 @@ header.navigation {
     padding: 2em;
     text-align: center;
     @include media($large-screen){
-      padding: 5em;
+      padding: 6em;
     }
     .hero-copy {
       text-align: center;
 
       h1 {
-        font-size: 1.2em;
-        margin-bottom: 2em;
+        font-size: 1.5em;
         font-weight: 300;
         letter-spacing: .05em;
-        line-height: 1.2em;
+        line-height: 2em;
 
         @include media($large-screen) {
-          font-size: 1.8em;
-          line-height: 1.8em;
+          font-size: 2em;
+          line-height: 2em;
         }
       }
 
@@ -639,14 +639,65 @@ header.navigation {
     }
   }
 }
+
 //intiatives page styling
+#initHero{
+  $base-border-radius: 3px !default;
+  $hero-color: $off-white;
+  $gradient-angle: 10deg;
+  $hero-image: '../resources/images/darkdesk3.jpg';
+  @include background(url($hero-image), scroll);
+  background-color: $dark-gray;
+  background-position: center;
+  background-size: cover;
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    @include media($large-screen){
+      padding: 6em;
+    }
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1.7em;
+        @include media($large-screen) {
+          font-size: 2em;
+          line-height: 2em;
+        }
+      }
+      h2{
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.5em;
+        @include media($large-screen) {
+          font-size: 1.5em;
+          line-height: 1.7em;
+        }
+      }
+    }
+    button {
+      @include button(flat, $gwp-orange);
+      padding: 0.7em 1em;
+      color: #ffffff;
+    }
+  }
+}
 .initstatement {
   font-size: 1.5em;
   margin: auto;
   text-align: center;
-  padding: 3em;
-  background-color: $gwp-orange;
-  color: $off-white;
+  padding: 2em;
+  color: $dark-gray;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -678,7 +729,7 @@ header.navigation {
 
   .init-content {
     @include span-columns(12);
-    padding: 1em 1em 4em 4em;
+    padding: 1em 2em 4em 2em;
 
     @include media($large-screen) {
       @include span-columns(5);
@@ -708,7 +759,12 @@ header.navigation {
 
   @include reset-display();
 }
+.cstGrid{
+  @include outer-container;
+  .cstItem{
 
+  }
+}
 
 //footer and lower content styles below
 .lowerContent{
