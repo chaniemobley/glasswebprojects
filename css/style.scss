@@ -45,7 +45,9 @@ button {
 header.navigation {
   $large-screen: $large-screen;
   padding: 1em;
-  margin-bottom: 1em;
+  @include media($large-screen){
+    margin-bottom: 1em;
+  }
 
   // Mobile view
   .navigation-menu-button {
@@ -155,7 +157,6 @@ header.navigation {
 
 .hero {
   $base-border-radius: 3px !default;
-  $action-color: $gwp-blue;
   $hero-color: $off-white;
   $gradient-angle: 10deg;
   $hero-image: '../resources/images/shatter.gif';
@@ -205,7 +206,7 @@ header.navigation {
     }
 
     button {
-      @include button(flat, $action-color);
+      @include button(flat, $gwp-green);
       padding: 0.7em 1em;
       a {
         color: $off-white;
@@ -473,7 +474,7 @@ header.navigation {
 
   .side-image-content {
     @include span-columns(12);
-    padding: 1em 1em 4em 4em;
+    padding: 1em 2em 4em 2em;
 
     @include media($large-screen) {
       @include span-columns(7);
@@ -565,7 +566,10 @@ header.navigation {
 .serviceList {
   @include outer-container;
   @include clearfix;
-  padding: 0 3em;
+  padding: 0;
+  @include media($large-screen){
+    padding: 0 3em;
+  }
   .serviceItem {
     @include span-columns(12);
     @include media($large-screen) {
@@ -619,10 +623,11 @@ header.navigation {
       text-align: center;
 
       h1 {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        margin-bottom: 2em;
         font-weight: 300;
         letter-spacing: .05em;
-        line-height: 2em;
+        line-height: 1.7em;
 
         @include media($large-screen) {
           font-size: 2em;
@@ -640,6 +645,11 @@ header.navigation {
           max-width: 40%;
         }
       }
+    }
+    button {
+      @include button(flat, $gwp-orange);
+      padding: 0.7em 1em;
+      color: #ffffff;
     }
   }
 }
@@ -763,6 +773,79 @@ header.navigation {
 
   @include reset-display();
 }
+.flex-boxes {
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
+  $flex-box-border-color: $light-gray;
+  $flex-box-border: 1px solid $flex-box-border-color;
+  $flex-box-background: lighten($light-gray, 10%);
+  $flex-box-gutter: 0.4em;
+  $flex-box-width: 18em;
+  $flex-box-color: transparentize($base-font-color, 0.3);
+  $flex-box-top-colors:
+    $gwp-green,
+    $gwp-orange,
+    $gwp-blue,
+    #CB9471;
+
+  @include clearfix;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
+  clear: both;
+
+  .flex-box {
+    @include transition (all 0.2s ease-in-out);
+    @include flex(2 2 15em);
+    @include align-self(stretch);
+    background: $flex-box-background;
+    border-radius: $base-border-radius;
+    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
+    display: block;
+    margin: $flex-box-gutter;
+    padding: 2em 1em 2em 1em;
+    text-decoration: none;
+
+    @for $i from 1 to 5 { // assign colors from $flex-box-top-colors list
+      &:nth-child(#{$i}) {
+        $color-from-list: nth($flex-box-top-colors, $i);
+        border-top: 6px solid $color-from-list;
+
+        &:focus,
+        &:hover {
+          background-color: transparentize($color-from-list, 0.7);
+        }
+      }
+    }
+
+    img {
+      display: block;
+      height: 3em;
+      margin: 0 auto 1em auto;
+      opacity: 0.4;
+    }
+
+    .flex-title {
+      color: $flex-box-color;
+      font-size: 1.2em;
+      font-weight: 800;
+      margin-bottom: 0.5em;
+      text-align: center!important;
+    }
+
+    p {
+      color: transparentize($flex-box-color, 0.1);
+      line-height: 1.5em;
+      margin: auto;
+      text-align: left;
+    }
+  }
+}
+
 .cstGrid {
   @include outer-container;
   .cstItem {
@@ -1005,8 +1088,11 @@ header.navigation {
       @include clearfix;
     }
     p {
-      text-align: left;
+      text-align: center;
       font-weight: 100;
+      @include media($large-screen){
+        text-align: left;
+      }
 
     }
     h2 {

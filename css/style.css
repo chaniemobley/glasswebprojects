@@ -20,8 +20,10 @@ button a {
   text-decoration: none; }
 
 header.navigation {
-  padding: 1em;
-  margin-bottom: 1em; }
+  padding: 1em; }
+  @media screen and (min-width: 53.75em) {
+    header.navigation {
+      margin-bottom: 1em; } }
   header.navigation .navigation-menu-button {
     display: block;
     float: right;
@@ -148,7 +150,7 @@ header.navigation {
             font-size: 1.1em;
             max-width: 40%; } }
     .hero .hero-inner button {
-      background-color: #30bbe5;
+      background-color: #96c342;
       border-radius: 3px;
       border: 0;
       color: #333333;
@@ -160,10 +162,10 @@ header.navigation {
       background-clip: padding-box;
       padding: 0.7em 1em; }
       .hero .hero-inner button:hover:not(:disabled) {
-        background-color: #43c5ec;
+        background-color: #a2ce51;
         cursor: pointer; }
       .hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
-        background-color: #21afda;
+        background-color: #87ae3d;
         cursor: pointer; }
       .hero .hero-inner button:disabled {
         cursor: not-allowed;
@@ -420,7 +422,7 @@ header.navigation {
   .side-image .side-image-content {
     display: table-cell;
     width: 100%;
-    padding: 1em 1em 4em 4em; }
+    padding: 1em 2em 4em 2em; }
     @media screen and (min-width: 53.75em) {
       .side-image .side-image-content {
         display: table-cell;
@@ -525,7 +527,7 @@ header.navigation {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 3em; }
+  padding: 0; }
   .serviceList::after {
     clear: both;
     content: "";
@@ -534,6 +536,9 @@ header.navigation {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (min-width: 53.75em) {
+    .serviceList {
+      padding: 0 3em; } }
   .serviceList .serviceItem {
     float: left;
     display: block;
@@ -594,10 +599,11 @@ header.navigation {
     #serviceHero .hero-inner .hero-copy {
       text-align: center; }
       #serviceHero .hero-inner .hero-copy h1 {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        margin-bottom: 2em;
         font-weight: 300;
         letter-spacing: .05em;
-        line-height: 2em; }
+        line-height: 1.7em; }
         @media screen and (min-width: 53.75em) {
           #serviceHero .hero-inner .hero-copy h1 {
             font-size: 2em;
@@ -610,6 +616,28 @@ header.navigation {
           #serviceHero .hero-inner .hero-copy p {
             font-size: 1.1em;
             max-width: 40%; } }
+    #serviceHero .hero-inner button {
+      background-color: #f29621;
+      border-radius: 3px;
+      border: 0;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 7px 18px;
+      text-decoration: none;
+      background-clip: padding-box;
+      padding: 0.7em 1em;
+      color: #ffffff; }
+      #serviceHero .hero-inner button:hover:not(:disabled) {
+        background-color: #f8a235;
+        cursor: pointer; }
+      #serviceHero .hero-inner button:active:not(:disabled), #serviceHero .hero-inner button:focus:not(:disabled) {
+        background-color: #e78913;
+        cursor: pointer; }
+      #serviceHero .hero-inner button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
 
 #initHero {
   background: url("../resources/images/darkdesk3.jpg"), scroll;
@@ -735,6 +763,99 @@ header.navigation {
     .side-image-init p.smaller {
       font-size: .7em;
       font-style: italic; }
+
+.flex-boxes {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  clear: both; }
+  .flex-boxes::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .flex-boxes .flex-box {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    box-flex: 2;
+    -webkit-flex: 2 2 15em;
+    -moz-flex: 2 2 15em;
+    -ms-flex: 2 2 15em;
+    flex: 2 2 15em;
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    align-self: stretch;
+    -ms-flex-item-align: stretch;
+    background: #f7f7f7;
+    border-radius: 3px;
+    box-shadow: inset 0 0 1px #DDD, 0 2px 4px #e6e6e6;
+    display: block;
+    margin: 0.4em;
+    padding: 2em 1em 2em 1em;
+    text-decoration: none; }
+    .flex-boxes .flex-box:nth-child(1) {
+      border-top: 6px solid #96c342; }
+      .flex-boxes .flex-box:nth-child(1):focus, .flex-boxes .flex-box:nth-child(1):hover {
+        background-color: rgba(150, 195, 66, 0.3); }
+    .flex-boxes .flex-box:nth-child(2) {
+      border-top: 6px solid #f29621; }
+      .flex-boxes .flex-box:nth-child(2):focus, .flex-boxes .flex-box:nth-child(2):hover {
+        background-color: rgba(242, 150, 33, 0.3); }
+    .flex-boxes .flex-box:nth-child(3) {
+      border-top: 6px solid #30bbe5; }
+      .flex-boxes .flex-box:nth-child(3):focus, .flex-boxes .flex-box:nth-child(3):hover {
+        background-color: rgba(48, 187, 229, 0.3); }
+    .flex-boxes .flex-box:nth-child(4) {
+      border-top: 6px solid #CB9471; }
+      .flex-boxes .flex-box:nth-child(4):focus, .flex-boxes .flex-box:nth-child(4):hover {
+        background-color: rgba(203, 148, 113, 0.3); }
+    .flex-boxes .flex-box img {
+      display: block;
+      height: 3em;
+      margin: 0 auto 1em auto;
+      opacity: 0.4; }
+    .flex-boxes .flex-box .flex-title {
+      color: rgba(49, 48, 48, 0.7);
+      font-size: 1.2em;
+      font-weight: 800;
+      margin-bottom: 0.5em;
+      text-align: center !important; }
+    .flex-boxes .flex-box p {
+      color: rgba(49, 48, 48, 0.6);
+      line-height: 1.5em;
+      margin: auto;
+      text-align: left; }
 
 .cstGrid {
   max-width: 68em;
@@ -1057,8 +1178,11 @@ header.navigation {
           content: "";
           display: table; } }
     .footer section p {
-      text-align: left;
+      text-align: center;
       font-weight: 100; }
+      @media screen and (min-width: 53.75em) {
+        .footer section p {
+          text-align: left; } }
     .footer section h2 {
       color: #30bbe5;
       text-transform: uppercase;
