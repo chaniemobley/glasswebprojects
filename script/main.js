@@ -10,21 +10,14 @@ $(document).ready(function() {
             }
         });
     });
-});
-$(function() {
-    $("#modal-1").on("change", function() {
-        if ($(this).is(":checked")) {
-            $("body").addClass("modal-open");
-        } else {
-            $("body").removeClass("modal-open");
-        }
-    });
 
-    $(".modal-fade-screen, .modal-close").on("click", function() {
-        $(".modal-state:checked").prop("checked", false).change();
-    });
-
-    $(".modal-inner").on("click", function(e) {
-        e.stopPropagation();
-    });
 });
+function expandIt(){
+    var expanderTrigger = document.getElementById("js-expander-trigger");
+    var expanderContent = document.getElementById("js-expander-content");
+
+    $('#js-expander-trigger').click(function(){
+        $(this).toggleClass("expander-hidden");
+    });
+}
+

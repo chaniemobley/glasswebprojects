@@ -227,7 +227,8 @@ header.navigation {
     padding-left: .8em; }
   .bullets .bullet-content {
     margin-left: 5.25em;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    padding-right: .5em; }
   .bullets h2 {
     display: inline-block;
     font-size: 1.4em;
@@ -846,25 +847,57 @@ header.navigation {
       margin: 0 auto 1em auto;
       opacity: 0.4; }
     .flex-boxes .flex-box .flex-title {
-      color: rgba(49, 48, 48, 0.7);
+      color: #313030;
       font-size: 1.2em;
       font-weight: 800;
       margin-bottom: 0.5em;
-      text-align: center !important; }
+      text-align: center !important;
+      text-transform: uppercase; }
     .flex-boxes .flex-box p {
       color: rgba(49, 48, 48, 0.6);
       line-height: 1.5em;
       margin: auto;
       text-align: left; }
 
-.cstGrid {
+#faqs {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .cstGrid::after {
+  #faqs::after {
     clear: both;
     content: "";
     display: table; }
+  #faqs h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em; }
+  #faqs .expander {
+    padding: 0 1.5em; }
+    #faqs .expander .expander-trigger {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border-bottom: 1px solid #DDD;
+      color: #477DCA;
+      cursor: pointer;
+      display: block;
+      font-size: 1em;
+      margin-bottom: 1em;
+      padding-bottom: 0.25em;
+      text-decoration: none; }
+      #faqs .expander .expander-trigger:before {
+        font-size: 1em;
+        content: "\25BC";
+        margin-right: 0.5em; }
+    #faqs .expander .expander-content p {
+      color: #313030;
+      line-height: 1.5em;
+      padding-bottom: 1em; }
+    #faqs .expander .expander-hidden:before {
+      font-size: 1em;
+      content: "\25BA"; }
+    #faqs .expander .expander-hidden + .expander-content {
+      display: none; }
 
 #contactHero {
   background: url("../resources/images/penpaper.jpg"), scroll;

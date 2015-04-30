@@ -221,6 +221,7 @@ header.navigation {
   margin: auto;
   padding: 1em;
 }
+
 //home page styling
 .bullets {
   $base-line-height: 1.5em !default;
@@ -268,6 +269,7 @@ header.navigation {
   .bullet-content {
     margin-left: $icon-bullet-size * 1.5;
     margin-bottom: 2em;
+    padding-right: .5em;
   }
 
   h2 {
@@ -830,11 +832,12 @@ header.navigation {
     }
 
     .flex-title {
-      color: $flex-box-color;
+      color: $dark-gray;
       font-size: 1.2em;
       font-weight: 800;
       margin-bottom: 0.5em;
       text-align: center!important;
+      text-transform: uppercase;
     }
 
     p {
@@ -845,12 +848,62 @@ header.navigation {
     }
   }
 }
-
-.cstGrid {
+#faqs{
   @include outer-container;
-  .cstItem {
-
+  h1{
+    font-size: 1.5em;
+    margin-bottom: 1em;
   }
+  .expander {
+    $base-font-size: 1em !default;
+    $base-line-height: 1.5em !default;
+    $base-spacing: 1.5em !default;
+    $action-color: #477DCA !default;
+    $base-link-color: $action-color !default;
+    $dark-gray: #333 !default;
+    $light-gray: #DDD !default;
+    $base-font-color: $dark-gray !default;
+    $expander-arrow-width: 1em;
+    $expander-toggle-size: 1em;
+    $expander-toggle-arrow-size: $expander-toggle-size;
+    $expander-toggle-margin: 1em;
+    padding: 0 1.5em;
+    .expander-trigger {
+      @include user-select(none);
+      border-bottom: 1px solid $light-gray;
+      color: $base-link-color;
+      cursor: pointer;
+      display: block;
+      font-size: $expander-toggle-size;
+      margin-bottom: $expander-toggle-size;
+      padding-bottom: $expander-toggle-size / 4;
+      text-decoration: none;
+
+      &:before {
+        font-size: $expander-arrow-width;
+        content: "\25BC";
+        margin-right: 0.5em;
+      }
+    }
+
+    .expander-content p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+      padding-bottom: 1em;
+    }
+
+    .expander-hidden {
+      &:before {
+        font-size: $expander-arrow-width;
+        content: "\25BA";
+      }
+    }
+
+    .expander-hidden + .expander-content {
+      display: none;
+    }
+  }
+
 }
 
 //contact page
