@@ -35,8 +35,53 @@
         </nav>
     </div>
 </header>
-
-<div>Are you a company or a cause with an idea or project that aims to make the world better? Glass Web Projects is at the ready. Mobilize our community team of talent and funding to make it happen - and make a difference.</div>
+<div id="gotHero">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <h1>Got a project?</h1>
+            <h2>Glass Web Projects works exclusively with clients, both companies and causes, pursuing positive social impact through business. Big or small, tell us about your idea to make the world better. We'll get to work!</h2>
+        </div>
+    </div>
+</div>
+<div id="formContainer">
+    <div id="projectForm">
+        <form id="project" class="form" action="" method="post">
+            <div class="alert"></div>
+            <div class="content">
+                <div class="field">
+                    <label>Name</label>
+                    <input type="text" placeholder="Name" name="projectName" id="projectName" />
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="text" placeholder="Email" name="projectEmail" id="projectEmail" />
+                </div>
+                <div class="field">
+                    <label>Company Name</label>
+                    <input type="text" name="projectCompany" id="projectCompany" />
+                </div>
+                <div class="field">
+                    <label>What are you trying to accomplish? What do you think you need to do it?</label>
+                    <textarea name="contactMessage" id="projectMessage"></textarea>
+                </div>
+                <div class="field">
+                    <label>Which sustainable efforts does your organization include?</label>
+                    <div><input type="checkbox" value="1" name="SubmitProjectForm[requirements][Environmental]" id="SubmitProjectForm_requirements_Environmental" /> <span>Environmental</span></div>
+                    <div><input type="checkbox" value="1" name="SubmitProjectForm[requirements][CommunitySupport]" id="SubmitProjectForm_requirements_CommunitySupport" /> <span>Community Support</span></div>
+                    <div><input type="checkbox" value="1" name="SubmitProjectForm[requirements][HappyWorkforce]" id="SubmitProjectForm_requirements_HappyWorkforce" /> <span>Happy Workforce</span></div>
+                    <div><input type="checkbox" value="1" name="SubmitProjectForm[requirements][AnimalRights]" id="SubmitProjectForm_requirements_AnimalRights" /> <span>Animal Rights</span></div>
+                    <div><input type="checkbox" value="1" name="SubmitProjectForm[requirements][Consumer-Oriented]" id="SubmitProjectForm_requirements_Consumer-Oriented" /> <span>Consumer-Oriented</span></div>
+                </div>
+                <input type="hidden" name="_subject" value="Website Project Submission" />
+                <input type="text" name="_gotcha" style="display:none" />
+                <div class="field align-right">
+                    <button type="submit" class="btn" name="submit">Submit Project</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div>Are you a company or a cause with an idea or project that aims to make the world better? Glass Web Projects is at the ready. Mobilize our community team of talent to make it happen - and make a difference.</div>
 
 
 
@@ -90,5 +135,26 @@
         &copy; 2015 Glass Web Projects
     </p>
 </footer>
+<script>
+    $(function(){
+        $('form#project').submit(function(e){
+            var self = $(this);
+
+            $.ajax({
+                url:'//formspree.io/chaniemobley@gmail.com',
+                type:'POST',
+                data:self.serialize(),
+                dataType:'json',
+                success:function(){
+                    console.log('submitted');
+                    $('.alert',self).addClass('success').html('<p>Thanks for reaching out!  I\'ll be in touch.</p>');
+                    self[0].reset();
+                }
+            });
+
+            e.preventDefault();
+        });
+    });
+</script>
 </body>
 </html>

@@ -42,10 +42,11 @@ button {
   }
 }
 
+//nav styling
 header.navigation {
   $large-screen: $large-screen;
   padding: 1em;
-  @include media($large-screen){
+  @include media($large-screen) {
     margin-bottom: 1em;
   }
 
@@ -102,6 +103,7 @@ header.navigation {
     overflow: visible;
     padding: 0;
     width: 100%;
+    padding-top: 1em;
 
     @include media($large-screen) {
       display: block;
@@ -155,6 +157,13 @@ header.navigation {
   }
 }
 
+.wrapper {
+  max-width: 68em;
+  margin: auto;
+  padding: 1em;
+}
+
+//home page styling
 .hero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
@@ -216,13 +225,6 @@ header.navigation {
   }
 }
 
-.wrapper {
-  max-width: 68em;
-  margin: auto;
-  padding: 1em;
-}
-
-//home page styling
 .bullets {
   $base-line-height: 1.5em !default;
   $base-font-color: $dark-gray !default;
@@ -299,6 +301,7 @@ header.navigation {
     max-width: 100%;
   }
 }
+
 .statement {
   font-size: 1.5em;
   margin: auto;
@@ -308,6 +311,7 @@ header.navigation {
   color: $off-white;
   font-weight: 600;
 }
+
 #testwrapper {
   @include outer-container;
   @include clearfix;
@@ -447,6 +451,7 @@ header.navigation {
     }
   }
 }
+
 .side-image {
   $base-line-height: 1.5em !default;
   $base-link-color: $gwp-orange !default;
@@ -569,7 +574,7 @@ header.navigation {
   @include outer-container;
   @include clearfix;
   padding: 0;
-  @include media($large-screen){
+  @include media($large-screen) {
     padding: 0 3em;
   }
   .serviceItem {
@@ -595,6 +600,7 @@ header.navigation {
     }
   }
 }
+
 #serviceHero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
@@ -654,7 +660,8 @@ header.navigation {
     }
   }
 }
-#work{
+
+#work {
   .workIntro {
     text-align: center;
     background: $dark-gray;
@@ -665,13 +672,13 @@ header.navigation {
       text-transform: uppercase;
       font-weight: 500;
       display: inline-block;
-      @include media($large-screen){
+      @include media($large-screen) {
         font-size: 3em;
         line-height: 1em;
       }
       @include clearfix;
     }
-    h3{
+    h3 {
       display: block;
       font-weight: 300;
       margin-top: 1em;
@@ -686,10 +693,10 @@ header.navigation {
       padding: 3em;
     }
   }
-  .workGrid{
+  .workGrid {
     padding: 3em;
     @include outer-container;
-    .workItem{
+    .workItem {
       @include span-columns(6);
       @include omega(2n);
       padding: .5em;
@@ -712,6 +719,7 @@ header.navigation {
         font-size: .8em;
         font-weight: 100;
       }
+
     }
   }
 }
@@ -768,6 +776,7 @@ header.navigation {
     }
   }
 }
+
 .initstatement {
   font-size: 1.5em;
   margin: auto;
@@ -776,15 +785,16 @@ header.navigation {
   color: $dark-gray;
   font-weight: 600;
   text-transform: uppercase;
-  &.alt{
+  &.alt {
     text-transform: none;
     background-color: $off-white;
-    h2{
+    h2 {
       font-size: 1em;
       font-weight: 500;
     }
   }
 }
+
 .side-image-init {
   $base-line-height: 1.5em !default;
   $base-link-color: $gwp-orange !default;
@@ -838,11 +848,11 @@ header.navigation {
     &.smaller {
       font-size: .9em;
       font-style: italic;
-      @include media($large-screen){
+      @include media($large-screen) {
         font-size: .7em
       }
     }
-    @include media($large-screen){
+    @include media($large-screen) {
       font-size: 1em;
       line-height: 1.2em;
     }
@@ -850,6 +860,7 @@ header.navigation {
 
   @include reset-display();
 }
+
 .flex-boxes {
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -862,11 +873,7 @@ header.navigation {
   $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
   $flex-box-color: transparentize($base-font-color, 0.3);
-  $flex-box-top-colors:
-    $gwp-green,
-    $gwp-orange,
-    $gwp-blue,
-    #CB9471;
+  $flex-box-top-colors: $gwp-green, $gwp-orange, $gwp-blue, #CB9471;
 
   @include clearfix;
   @include display(flex);
@@ -876,7 +883,7 @@ header.navigation {
   clear: both;
 
   .flex-box {
-    @include transition (all 0.2s ease-in-out);
+    @include transition(all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
     background: $flex-box-background;
@@ -887,7 +894,8 @@ header.navigation {
     padding: 2em 1em 2em 1em;
     text-decoration: none;
 
-    @for $i from 1 to 5 { // assign colors from $flex-box-top-colors list
+    @for $i from 1 to 5 {
+      // assign colors from $flex-box-top-colors list
       &:nth-child(#{$i}) {
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
@@ -911,7 +919,7 @@ header.navigation {
       font-size: 1.2em;
       font-weight: 800;
       margin-bottom: 0.5em;
-      text-align: center!important;
+      text-align: center !important;
       text-transform: uppercase;
     }
 
@@ -923,19 +931,20 @@ header.navigation {
     }
   }
 }
-#faqs{
+
+#faqs {
   $light-gray: #DDD !default;
   @include outer-container;
   margin-top: 2em;
   padding: 1em;
-  h1{
+  h1 {
     font-size: 1.5em;
     margin-bottom: 1em;
   }
-  .faqitem{
-    .question{
+  .faqitem {
+    .question {
       border-bottom: 1px solid $light-gray;
-      h3{
+      h3 {
         font-size: 1.2em;
         font-weight: 600;
       }
@@ -945,13 +954,12 @@ header.navigation {
       padding: .5em 0 1em 1em;
       font-size: 1em;
       line-height: 1.2em;
-      ul{
+      ul {
         padding-left: 2em;
       }
     }
   }
 }
-
 
 //contact page
 #contactHero {
@@ -1005,10 +1013,12 @@ header.navigation {
     }
   }
 }
+
 #formContainer {
   @include clearfix;
   padding: 2em 1em;
-  @include media($large-screen){
+  background-color: $off-white;
+  @include media($large-screen) {
     padding: 2em 6em;
   }
   #contactForm {
@@ -1066,6 +1076,125 @@ header.navigation {
   }
 }
 
+//got a project page
+#gotHero {
+  $base-border-radius: 3px !default;
+  $hero-color: $off-white;
+  $gradient-angle: 10deg;
+  $hero-image: '../resources/images/windpower2.jpg';
+  @include background(url($hero-image), scroll);
+  background-color: $dark-gray;
+  background-position: center;
+  background-size: cover;
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    @include media($large-screen) {
+      padding: 6em;
+    }
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1.7em;
+        @include media($large-screen) {
+          font-size: 2em;
+          line-height: 2em;
+        }
+      }
+      h2 {
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.5em;
+        @include media($large-screen) {
+          font-size: 1.5em;
+          line-height: 1.7em;
+        }
+      }
+    }
+    button {
+      @include button(flat, $gwp-orange);
+      padding: 0.7em 1em;
+      color: #ffffff;
+    }
+  }
+}
+
+#formContainer {
+  @include clearfix;
+  padding: 2em 1em;
+  background-color: $off-white;
+  @include media($large-screen) {
+    padding: 2em 6em;
+  }
+  #projectForm {
+    @include span-columns(12);
+    padding: 2em;
+    @include media($large-screen) {
+      @include span-columns(8);
+    }
+    .form {
+      color: $dark-gray;
+      font-size: 1em;
+      h1 {
+        font-size: 3em;
+        color: $dark-gray;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+      }
+      label {
+        color: $dark-gray;
+        font-size: 1.5em;
+        display: block;
+        margin-bottom: .5em;
+      }
+      div {
+        display: block;
+      }
+      input, form textarea, form select {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #666666;
+        border-radius: 3px;
+        padding: .3em;
+        width: 100%;
+        font-size: 1.2em;
+      }
+      textarea {
+        height: 10em;
+        width: 100%;
+        font-size: 1.2em;
+      }
+      input[type="checkbox"] {
+        display: inline-block;
+        width: inherit;
+      }
+      .field {
+        margin-bottom: 1em;
+        button {
+          @include button(flat, $gwp-blue);
+          padding: 0.7em 1em;
+          display: inline-block;
+          margin-top: .5em;
+          a {
+            color: $dark-gray;
+          }
+        }
+      }
+
+    }
+  }
+}
+
 //footer and lower content styles below
 .lowerContent {
   @include clearfix;
@@ -1073,6 +1202,9 @@ header.navigation {
   background-color: $gwp-blue;
   text-align: center;
   padding: 4em 1em 1em 1em;
+  &.noTop {
+    margin-top: 0;
+  }
   .gotProj {
     @include span-columns(12);
     border-right: none;
@@ -1187,7 +1319,7 @@ header.navigation {
     p {
       text-align: center;
       font-weight: 100;
-      @include media($large-screen){
+      @include media($large-screen) {
         text-align: left;
       }
 

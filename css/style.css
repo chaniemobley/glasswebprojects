@@ -66,7 +66,8 @@ header.navigation {
     margin: 0 auto;
     overflow: visible;
     padding: 0;
-    width: 100%; }
+    width: 100%;
+    padding-top: 1em; }
     @media screen and (min-width: 53.75em) {
       header.navigation ul.navigation-menu {
         display: block;
@@ -104,6 +105,11 @@ header.navigation {
     @media screen and (min-width: 53.75em) {
       header.navigation li.nav-link a {
         margin-right: 2em; } }
+
+.wrapper {
+  max-width: 68em;
+  margin: auto;
+  padding: 1em; }
 
 .hero {
   background: url("../resources/images/shatter.gif"), scroll;
@@ -173,11 +179,6 @@ header.navigation {
       .hero .hero-inner button a {
         color: #eeeeee;
         text-decoration: none; }
-
-.wrapper {
-  max-width: 68em;
-  margin: auto;
-  padding: 1em; }
 
 .bullets {
   display: -webkit-box;
@@ -1057,7 +1058,8 @@ header.navigation {
         opacity: 0.5; }
 
 #formContainer {
-  padding: 2em 1em; }
+  padding: 2em 1em;
+  background-color: #eeeeee; }
   #formContainer::after {
     clear: both;
     content: "";
@@ -1136,6 +1138,159 @@ header.navigation {
           #formContainer #contactForm .form .field button a {
             color: #313030; }
 
+#gotHero {
+  background: url("../resources/images/windpower2.jpg"), scroll;
+  background: url("../resources/images/windpower2.jpg"), scroll;
+  background-color: #313030;
+  background-position: center;
+  background-size: cover; }
+  #gotHero .hero-inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eeeeee;
+    margin: auto;
+    padding: 2em;
+    text-align: center; }
+    #gotHero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #gotHero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 53.75em) {
+      #gotHero .hero-inner {
+        padding: 6em; } }
+    #gotHero .hero-inner .hero-copy {
+      text-align: center; }
+      #gotHero .hero-inner .hero-copy h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1.7em; }
+        @media screen and (min-width: 53.75em) {
+          #gotHero .hero-inner .hero-copy h1 {
+            font-size: 2em;
+            line-height: 2em; } }
+      #gotHero .hero-inner .hero-copy h2 {
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 1.5em; }
+        @media screen and (min-width: 53.75em) {
+          #gotHero .hero-inner .hero-copy h2 {
+            font-size: 1.5em;
+            line-height: 1.7em; } }
+    #gotHero .hero-inner button {
+      background-color: #f29621;
+      border-radius: 3px;
+      border: 0;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 7px 18px;
+      text-decoration: none;
+      background-clip: padding-box;
+      padding: 0.7em 1em;
+      color: #ffffff; }
+      #gotHero .hero-inner button:hover:not(:disabled) {
+        background-color: #f8a235;
+        cursor: pointer; }
+      #gotHero .hero-inner button:active:not(:disabled), #gotHero .hero-inner button:focus:not(:disabled) {
+        background-color: #e78913;
+        cursor: pointer; }
+      #gotHero .hero-inner button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+
+#formContainer {
+  padding: 2em 1em;
+  background-color: #eeeeee; }
+  #formContainer::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 53.75em) {
+    #formContainer {
+      padding: 2em 6em; } }
+  #formContainer #projectForm {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 2em; }
+    #formContainer #projectForm:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      #formContainer #projectForm {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%; }
+        #formContainer #projectForm:last-child {
+          margin-right: 0; } }
+    #formContainer #projectForm .form {
+      color: #313030;
+      font-size: 1em; }
+      #formContainer #projectForm .form h1 {
+        font-size: 3em;
+        color: #313030;
+        margin-bottom: 1em;
+        text-transform: uppercase; }
+      #formContainer #projectForm .form label {
+        color: #313030;
+        font-size: 1.5em;
+        display: block;
+        margin-bottom: .5em; }
+      #formContainer #projectForm .form div {
+        display: block; }
+      #formContainer #projectForm .form input, #formContainer #projectForm .form form textarea, #formContainer #projectForm .form form select {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #666666;
+        border-radius: 3px;
+        padding: .3em;
+        width: 100%;
+        font-size: 1.2em; }
+      #formContainer #projectForm .form textarea {
+        height: 10em;
+        width: 100%;
+        font-size: 1.2em; }
+      #formContainer #projectForm .form input[type="checkbox"] {
+        display: inline-block;
+        width: inherit; }
+      #formContainer #projectForm .form .field {
+        margin-bottom: 1em; }
+        #formContainer #projectForm .form .field button {
+          background-color: #30bbe5;
+          border-radius: 3px;
+          border: 0;
+          color: #333333;
+          display: inline-block;
+          font-size: inherit;
+          font-weight: bold;
+          padding: 7px 18px;
+          text-decoration: none;
+          background-clip: padding-box;
+          padding: 0.7em 1em;
+          display: inline-block;
+          margin-top: .5em; }
+          #formContainer #projectForm .form .field button:hover:not(:disabled) {
+            background-color: #43c5ec;
+            cursor: pointer; }
+          #formContainer #projectForm .form .field button:active:not(:disabled), #formContainer #projectForm .form .field button:focus:not(:disabled) {
+            background-color: #21afda;
+            cursor: pointer; }
+          #formContainer #projectForm .form .field button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5; }
+          #formContainer #projectForm .form .field button a {
+            color: #313030; }
+
 .lowerContent {
   margin-top: 2em;
   background-color: #30bbe5;
@@ -1145,6 +1300,8 @@ header.navigation {
     clear: both;
     content: "";
     display: table; }
+  .lowerContent.noTop {
+    margin-top: 0; }
   .lowerContent .gotProj {
     float: left;
     display: block;
