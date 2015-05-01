@@ -640,6 +640,95 @@ header.navigation {
         cursor: not-allowed;
         opacity: 0.5; }
 
+#work .workIntro {
+  text-align: center;
+  background: #313030;
+  color: #eeeeee; }
+  #work .workIntro h1 {
+    font-size: 2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block; }
+    @media screen and (min-width: 53.75em) {
+      #work .workIntro h1 {
+        font-size: 3em;
+        line-height: 1em; } }
+    #work .workIntro h1::after {
+      clear: both;
+      content: "";
+      display: table; }
+  #work .workIntro h3 {
+    display: block;
+    font-weight: 300;
+    margin-top: 1em; }
+  #work .workIntro img {
+    display: inline-block;
+    max-height: 4em;
+    vertical-align: bottom; }
+  #work .workIntro .workWrap {
+    padding: 3em; }
+#work .workGrid {
+  padding: 3em;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #work .workGrid::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #work .workGrid .workItem {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    padding: .5em; }
+    #work .workGrid .workItem:last-child {
+      margin-right: 0; }
+    #work .workGrid .workItem:nth-child(2n) {
+      margin-right: 0; }
+    #work .workGrid .workItem:nth-child(2n+1) {
+      clear: left; }
+    @media screen and (min-width: 48em) {
+      #work .workGrid .workItem {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        #work .workGrid .workItem:nth-child(2n) {
+          margin-right: 2.35765%; }
+        #work .workGrid .workItem:nth-child(2n+1) {
+          clear: none; }
+        #work .workGrid .workItem:last-child {
+          margin-right: 0; }
+        #work .workGrid .workItem:nth-child(3n) {
+          margin-right: 0; }
+        #work .workGrid .workItem:nth-child(3n+1) {
+          clear: left; } }
+    @media screen and (min-width: 53.75em) {
+      #work .workGrid .workItem {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        #work .workGrid .workItem:nth-child(3n) {
+          margin-right: 2.35765%; }
+        #work .workGrid .workItem:nth-child(3n+1) {
+          clear: none; }
+        #work .workGrid .workItem:last-child {
+          margin-right: 0; }
+        #work .workGrid .workItem:nth-child(4n) {
+          margin-right: 0; }
+        #work .workGrid .workItem:nth-child(4n+1) {
+          clear: left; } }
+    #work .workGrid .workItem h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 1em 0 .5em 0; }
+    #work .workGrid .workItem p {
+      font-size: .8em;
+      font-weight: 100; }
+
 #initHero {
   background: url("../resources/images/darkdesk3.jpg"), scroll;
   background: url("../resources/images/darkdesk3.jpg"), scroll;

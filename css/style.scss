@@ -595,7 +595,6 @@ header.navigation {
     }
   }
 }
-
 #serviceHero {
   $base-border-radius: 3px !default;
   $hero-color: $off-white;
@@ -652,6 +651,67 @@ header.navigation {
       @include button(flat, $gwp-orange);
       padding: 0.7em 1em;
       color: #ffffff;
+    }
+  }
+}
+#work{
+  .workIntro {
+    text-align: center;
+    background: $dark-gray;
+    color: $off-white;
+    h1 {
+      font-size: 2em;
+      line-height: 2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      display: inline-block;
+      @include media($large-screen){
+        font-size: 3em;
+        line-height: 1em;
+      }
+      @include clearfix;
+    }
+    h3{
+      display: block;
+      font-weight: 300;
+      margin-top: 1em;
+
+    }
+    img {
+      display: inline-block;
+      max-height: 4em;
+      vertical-align: bottom;
+    }
+    .workWrap {
+      padding: 3em;
+    }
+  }
+  .workGrid{
+    padding: 3em;
+    @include outer-container;
+    .workItem{
+      @include span-columns(6);
+      @include omega(2n);
+      padding: .5em;
+      @include media($medium-screen) {
+        @include omega-reset(2n);
+        @include span-columns(4);
+        @include omega(3n);
+      }
+      @include media($large-screen) {
+        @include omega-reset(3n);
+        @include span-columns(3);
+        @include omega(4n);
+      }
+      h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 1em 0 .5em 0;
+      }
+      p {
+        font-size: .8em;
+        font-weight: 100;
+      }
     }
   }
 }
