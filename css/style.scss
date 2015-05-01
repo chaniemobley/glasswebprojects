@@ -1,6 +1,7 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
+
 // ------------------------------------------------------------
 // Omega Reset
 // ------------------------------------------------------------
@@ -12,6 +13,14 @@
   &:nth-child(#{$nth}+1) {
     clear: none
   }
+}
+
+@mixin vertical-align{
+  position:relative;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  transform: translateY(-50%);
 }
 
 //variables
@@ -582,6 +591,9 @@ header.navigation {
     @include media($large-screen) {
       @include span-columns(4);
     }
+    @include media($medium-screen){
+      @include span-columns(4);
+    }
     padding: 2em;
     h1 {
       text-transform: uppercase;
@@ -720,6 +732,37 @@ header.navigation {
         font-weight: 100;
       }
 
+    }
+  }
+}
+
+
+#work .workGrid{
+  .workItem{
+    position:relative;
+    margin-bottom:1.5em;
+
+    .title{
+      position:absolute;
+      top:0; left:0; width:100%; height:100%;
+      z-index:2;
+      background:rgba(#313030, .8);
+      padding:1em;
+      opacity:0;
+      box-sizing:border-box;
+      @include transition(opacity 0.25s ease-in);
+
+      h3{
+        color:#fff;
+        text-align:center;
+        @include vertical-align;
+      }
+    }
+  }
+
+  .workItem:hover{
+    .title{
+      opacity:1;
     }
   }
 }
