@@ -776,6 +776,14 @@ header.navigation {
   color: $dark-gray;
   font-weight: 600;
   text-transform: uppercase;
+  &.alt{
+    text-transform: none;
+    background-color: $off-white;
+    h2{
+      font-size: 1em;
+      font-weight: 500;
+    }
+  }
 }
 .side-image-init {
   $base-line-height: 1.5em !default;
@@ -824,12 +832,19 @@ header.navigation {
   }
 
   p {
-    font-size: 1em;
-    line-height: 1.2em;
+    font-size: 1.2em;
+    line-height: 1.4em;
     font-weight: 300;
     &.smaller {
-      font-size: .7em;
+      font-size: .9em;
       font-style: italic;
+      @include media($large-screen){
+        font-size: .7em
+      }
+    }
+    @include media($large-screen){
+      font-size: 1em;
+      line-height: 1.2em;
     }
   }
 
@@ -909,62 +924,34 @@ header.navigation {
   }
 }
 #faqs{
+  $light-gray: #DDD !default;
   @include outer-container;
+  margin-top: 2em;
+  padding: 1em;
   h1{
     font-size: 1.5em;
     margin-bottom: 1em;
   }
-  .expander {
-    $base-font-size: 1em !default;
-    $base-line-height: 1.5em !default;
-    $base-spacing: 1.5em !default;
-    $action-color: #477DCA !default;
-    $base-link-color: $action-color !default;
-    $dark-gray: #333 !default;
-    $light-gray: #DDD !default;
-    $base-font-color: $dark-gray !default;
-    $expander-arrow-width: 1em;
-    $expander-toggle-size: 1em;
-    $expander-toggle-arrow-size: $expander-toggle-size;
-    $expander-toggle-margin: 1em;
-    padding: 0 1.5em;
-    .expander-trigger {
-      @include user-select(none);
+  .faqitem{
+    .question{
       border-bottom: 1px solid $light-gray;
-      color: $base-link-color;
-      cursor: pointer;
-      display: block;
-      font-size: $expander-toggle-size;
-      margin-bottom: $expander-toggle-size;
-      padding-bottom: $expander-toggle-size / 4;
-      text-decoration: none;
-
-      &:before {
-        font-size: $expander-arrow-width;
-        content: "\25BC";
-        margin-right: 0.5em;
+      h3{
+        font-size: 1.2em;
+        font-weight: 600;
       }
     }
-
-    .expander-content p {
-      color: $base-font-color;
-      line-height: $base-line-height;
-      padding-bottom: 1em;
-    }
-
-    .expander-hidden {
-      &:before {
-        font-size: $expander-arrow-width;
-        content: "\25BA";
+    .answer {
+      color: $dark-gray;
+      padding: .5em 0 1em 1em;
+      font-size: 1em;
+      line-height: 1.2em;
+      ul{
+        padding-left: 2em;
       }
-    }
-
-    .expander-hidden + .expander-content {
-      display: none;
     }
   }
-
 }
+
 
 //contact page
 #contactHero {
@@ -1020,7 +1007,6 @@ header.navigation {
 }
 #formContainer {
   @include clearfix;
-  background-color: $off-white;
   padding: 2em 1em;
   @include media($large-screen){
     padding: 2em 6em;
@@ -1042,13 +1028,9 @@ header.navigation {
       }
       label {
         color: $dark-gray;
-        font-size: 1em;
+        font-size: 1.5em;
         display: block;
         margin-bottom: .5em;
-      }
-      input[type=radio], input[type=checkbox] {
-        margin: 10px;
-        width: 13px;
       }
       div {
         display: block;
@@ -1065,9 +1047,10 @@ header.navigation {
       textarea {
         height: 10em;
         width: 100%;
+        font-size: 1.2em;
       }
       .field {
-        margin-bottom: 5px;
+        margin-bottom: 1em;
         button {
           @include button(flat, $gwp-blue);
           padding: 0.7em 1em;
@@ -1086,6 +1069,7 @@ header.navigation {
 //footer and lower content styles below
 .lowerContent {
   @include clearfix;
+  margin-top: 2em;
   background-color: $gwp-blue;
   text-align: center;
   padding: 4em 1em 1em 1em;

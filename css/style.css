@@ -806,6 +806,12 @@ header.navigation {
   color: #313030;
   font-weight: 600;
   text-transform: uppercase; }
+  .initstatement.alt {
+    text-transform: none;
+    background-color: #eeeeee; }
+    .initstatement.alt h2 {
+      font-size: 1em;
+      font-weight: 500; }
 
 .side-image-init {
   max-width: 68em;
@@ -847,12 +853,19 @@ header.navigation {
     font-size: 1.2em;
     text-transform: uppercase; }
   .side-image-init p {
-    font-size: 1em;
-    line-height: 1.2em;
+    font-size: 1.2em;
+    line-height: 1.4em;
     font-weight: 300; }
     .side-image-init p.smaller {
-      font-size: .7em;
+      font-size: .9em;
       font-style: italic; }
+      @media screen and (min-width: 53.75em) {
+        .side-image-init p.smaller {
+          font-size: 0.7em; } }
+    @media screen and (min-width: 53.75em) {
+      .side-image-init p {
+        font-size: 1em;
+        line-height: 1.2em; } }
 
 .flex-boxes {
   display: -webkit-box;
@@ -951,7 +964,9 @@ header.navigation {
 #faqs {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 2em;
+  padding: 1em; }
   #faqs::after {
     clear: both;
     content: "";
@@ -959,34 +974,18 @@ header.navigation {
   #faqs h1 {
     font-size: 1.5em;
     margin-bottom: 1em; }
-  #faqs .expander {
-    padding: 0 1.5em; }
-    #faqs .expander .expander-trigger {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      border-bottom: 1px solid #DDD;
-      color: #477DCA;
-      cursor: pointer;
-      display: block;
-      font-size: 1em;
-      margin-bottom: 1em;
-      padding-bottom: 0.25em;
-      text-decoration: none; }
-      #faqs .expander .expander-trigger:before {
-        font-size: 1em;
-        content: "\25BC";
-        margin-right: 0.5em; }
-    #faqs .expander .expander-content p {
-      color: #313030;
-      line-height: 1.5em;
-      padding-bottom: 1em; }
-    #faqs .expander .expander-hidden:before {
-      font-size: 1em;
-      content: "\25BA"; }
-    #faqs .expander .expander-hidden + .expander-content {
-      display: none; }
+  #faqs .faqitem .question {
+    border-bottom: 1px solid #DDD; }
+    #faqs .faqitem .question h3 {
+      font-size: 1.2em;
+      font-weight: 600; }
+  #faqs .faqitem .answer {
+    color: #313030;
+    padding: .5em 0 1em 1em;
+    font-size: 1em;
+    line-height: 1.2em; }
+    #faqs .faqitem .answer ul {
+      padding-left: 2em; }
 
 #contactHero {
   background: url("../resources/images/penpaper.jpg"), scroll;
@@ -1058,7 +1057,6 @@ header.navigation {
         opacity: 0.5; }
 
 #formContainer {
-  background-color: #eeeeee;
   padding: 2em 1em; }
   #formContainer::after {
     clear: both;
@@ -1093,12 +1091,9 @@ header.navigation {
         text-transform: uppercase; }
       #formContainer #contactForm .form label {
         color: #313030;
-        font-size: 1em;
+        font-size: 1.5em;
         display: block;
         margin-bottom: .5em; }
-      #formContainer #contactForm .form input[type=radio], #formContainer #contactForm .form input[type=checkbox] {
-        margin: 10px;
-        width: 13px; }
       #formContainer #contactForm .form div {
         display: block; }
       #formContainer #contactForm .form input, #formContainer #contactForm .form form textarea, #formContainer #contactForm .form form select {
@@ -1111,9 +1106,10 @@ header.navigation {
         font-size: 1.2em; }
       #formContainer #contactForm .form textarea {
         height: 10em;
-        width: 100%; }
+        width: 100%;
+        font-size: 1.2em; }
       #formContainer #contactForm .form .field {
-        margin-bottom: 5px; }
+        margin-bottom: 1em; }
         #formContainer #contactForm .form .field button {
           background-color: #30bbe5;
           border-radius: 3px;
@@ -1141,6 +1137,7 @@ header.navigation {
             color: #313030; }
 
 .lowerContent {
+  margin-top: 2em;
   background-color: #30bbe5;
   text-align: center;
   padding: 4em 1em 1em 1em; }
