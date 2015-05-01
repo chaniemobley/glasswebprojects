@@ -11,6 +11,7 @@
     <!--<link rel="stylesheet" href="css/responsive-nav.css"/>
     <script src="script/responsive-nav.js"></script>-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="script/uglipop.min.js"></script>
     <script src="script/main.js"></script>
     <script src="script/wow.js"></script>
     <script>
@@ -92,30 +93,30 @@
         </div>
     </div>
     <div class="workGrid">
-        <div class="workItem">
+        <a href class="workItem" data-modal data-trigger="modal1">
             <img src="resources/images/openforservice.jpg" class="img-responsive" alt="Open for Service Business logo" />
             <div class="title"><h3>Open for Service Business Directory</h3></div>
-        </div>
-        <div class="workItem">
+        </a>
+        <a href class="workItem" data-modal data-trigger="modal2">
             <img src="resources/images/greenways.gif" class="img-responsive" alt="Greenways Foundations logo" />
             <div class="title"><h3>Greenways Foundation: Trails Map</h3></div>
-        </div>
-        <div class="workItem">
+        </a>
+        <a href class="workItem" data-modal data-trigger="modal3">
             <img src="resources/images/earthmama.jpg" class="img-responsive" alt="Earth Mama Compost logo" />
             <div class="title"><h3>Earth Mama Compost: New Program</h3></div>
-        </div>
-        <div class="workItem">
+        </a>
+        <a href class="workItem" data-modal data-trigger="modal4">
             <img src="resources/images/poguesrungrocer.jpg" class="img-responsive" alt="Pogues Run Grocer logo" />
             <div class="title"><h3>Pogues Run Grocer: New Design</h3></div>
-        </div>
-        <div class="workItem">
+        </a>
+        <a href class="workItem" data-modal data-trigger="modal5">
             <img src="resources/images/ivs.png" class="img-responsive" alt="Indy Veg Society logo" />
             <div class="title"><h3>Indy Vegetarian Society: Recipes</h3></div>
-        </div>
-        <div class="workItem">
+        </a>
+        <a href class="workItem" data-modal data-trigger="modal6">
             <img src="resources/images/fullhandfarm.jpg" class="img-responsive" alt="Full Hand Farm logo" />
             <div class="title"><h3>Full Hand Farm: New Brand</h3></div>
-        </div>
+        </a>
     </div>
 </div>
 <div class="lowerContent">
@@ -177,5 +178,88 @@
         &copy; 2015 Glass Web Projects
     </p>
 </footer>
+
+
+<div class="modals" style="display:none;">
+    <div id="modal1">
+        <div class="img"><img src="resources/images/openforservice.jpg" /></div>
+        <div class="info">
+            <h2>Open for Service Business Directory</h2>
+            <p>We've been tasked to implement the Community Map plugin on the Openforservice.org Business Directory. The GWP Video team will be helping by creating either a video interview or animation.</p>
+        </div>
+        <div class="button">
+          <a href="http://www.openforservice.org/" target="_blank" class="btn">View the site</a>
+        </div>
+    </div>
+    <div id="modal2">
+        <div class="img"><img src="resources/images/greenways.gif" class="img-responsive" alt="Greenways Foundations logo" /></div>
+        <div class="info">
+            <h2>Greenways Foundation: Trails Map</h2>
+            <p>Greenways foundation is building a printed map of all Indiana trails and Glass Web Projects is using the Community Map plugin to build out a web-based map to be placed on indygreenways.org. The GWP video team will be building a supporting animation to help illustrate Greenways initiatives.</p>
+        </div>
+        <div class="button">
+          <a href="http://www.indygreenways.org/" target="_blank" class="btn">View the site</a>
+        </div>
+    </div>
+    <div id="modal3">
+        <div class="img"><img src="resources/images/earthmama.jpg" /></div>
+        <div class="info">
+            <h2>Earth Mama Compost: New Program</h2>
+            <p>Earth Mama Compost will be launching a new composting program in June to facilitate new composting bins to be placed around the city. Composting made easy! Here's what GWP is doing to help:</p>
+            <ul><li>Web consulting to assist on updates to the website which will promote the new program and brand adjustments</li><li>New video or animation which will quickly explain the new program - to be placed on the website home page</li><li>Social media consulting to build a plan of updates and increase brand visibility</li></ul>
+        </div>
+        <div class="button">
+          <a href="http://www.earthmamacompost.com/" target="_blank" class="btn">View the site</a>
+        </div>
+    </div>
+    <div id="modal4">
+        <div class="img"><img src="resources/images/poguesrungrocer.jpg" /></div>
+        <div class="info">
+            <h2>Pogues Run Grocer: New Design</h2>
+            <p>The GWP intern design team will be assisting Pogue's Run Grocer on creating a new website design and integrating the design in a custom theme for their WordPress.</p>
+            <p>Pogue's Run Grocer has opted-in to the GWP Community Map plugin which will be utilized as the new Pogue's interactive vendor list - displaying through their website. Work to be performed by Derek as a volunteer and Chanie on design.</p>
+        </div>
+        <div class="button">
+          <a href="http://www.poguesrungrocer.org/" target="_blank" class="btn">View the site</a>
+        </div>
+    </div>
+    <div id="modal5">
+        <div class="img"><img src="resources/images/ivs.png" /></div>
+        <div class="info">
+            <h2>Indy Vegetarian Society: Recipes</h2>
+            <p>Indy Veg Society has requested updates to their restaurants tool to display average ratings and a "search by rating" feature based on user reviews. Work to be performed by Derek as a volunteer. The GWP intern design group will be tackling the new recipes page tool for IVS. Look for an interactive, vegan and vegetarian recipe viewing experience soon!</p>
+        </div>
+        <div class="button">
+          <a href="http://www.indyvegsociety.org/" target="_blank" class="btn">View the site</a>
+        </div>
+    </div>
+    <div id="modal6">
+        <div class="img"><img src="resources/images/fullhandfarm.jpg" /></div>
+        <div class="info">
+            <h2>Full Hand Farm: New Brand</h2>
+            <p>Full Hand Farm is looking for a new website and logo to build out their online branding. Logo to be built by our freelance design group and website to be built using WordPress. Full branding update!!</p>
+        </div>
+        <div class="button">
+          <a href="http://www.facebook.com/fullhandfarm" target="_blank" class="btn">View the site</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+       var modal1 = '<div class=""><h2>This is a title</h2></div>';
+
+
+       $('a[data-modal]').on('click', function(){
+           var load = $(this).attr('data-trigger');
+           var content = $('#'+load).html();
+
+           uglipop({class:'projectMdl', source:'html', content:content});
+
+           return false;
+       });
+    });
+</script>
+
 </body>
 </html>

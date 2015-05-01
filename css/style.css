@@ -740,7 +740,10 @@ header.navigation {
 
 #work .workGrid .workItem {
   position: relative;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  display: block; }
+  #work .workGrid .workItem img {
+    width: 100%; }
   #work .workGrid .workItem .title {
     position: absolute;
     top: 0;
@@ -765,6 +768,71 @@ header.navigation {
       transform: translateY(-50%); }
 #work .workGrid .workItem:hover .title {
   opacity: 1; }
+
+#uglipop_overlay_wrapper {
+  z-index: 3; }
+  #uglipop_overlay_wrapper #uglipop_overlay {
+    opacity: .5; }
+
+#uglipop_content_fixed {
+  background: #fff;
+  z-index: 4;
+  max-width: 600px;
+  border-radius: 4px; }
+  #uglipop_content_fixed .img {
+    padding: 1.5em;
+    text-align: center;
+    background: #f4f5f6;
+    border-radius: 4px 4px 0 0; }
+    #uglipop_content_fixed .img img {
+      max-height: 200px; }
+  #uglipop_content_fixed .info {
+    padding: 1.5em; }
+    #uglipop_content_fixed .info h2 {
+      font-size: 130%;
+      margin-bottom: 1em; }
+    #uglipop_content_fixed .info p {
+      margin-bottom: 1em; }
+    #uglipop_content_fixed .info ul {
+      margin: 0 0 1em 1em; }
+    #uglipop_content_fixed .info ul li {
+      margin: 0 0 .5em; }
+  #uglipop_content_fixed .button {
+    padding: .75em 1.5em;
+    text-align: right;
+    border-top: 1px solid #eee; }
+    #uglipop_content_fixed .button a.btn {
+      background-color: #96c342;
+      border-radius: 3px;
+      border: 0;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      padding: 7px 18px;
+      text-decoration: none;
+      background-clip: padding-box;
+      padding: 0.7em 1em;
+      color: #eeeeee;
+      text-decoration: none; }
+      #uglipop_content_fixed .button a.btn:hover:not(:disabled) {
+        background-color: #a2ce51;
+        cursor: pointer; }
+      #uglipop_content_fixed .button a.btn:active:not(:disabled), #uglipop_content_fixed .button a.btn:focus:not(:disabled) {
+        background-color: #87ae3d;
+        cursor: pointer; }
+      #uglipop_content_fixed .button a.btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+  @media screen and (max-width: 767px) {
+    #uglipop_content_fixed {
+      width: 90%;
+      left: 5%;
+      -webkit-transform: translate(0%, -50%);
+      -moz-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+      -o-transform: translate(0%, -50%);
+      transform: translate(0%, -50%); } }
 
 #initHero {
   background: url("../resources/images/darkdesk3.jpg"), scroll;

@@ -741,6 +741,9 @@ header.navigation {
   .workItem{
     position:relative;
     margin-bottom:1.5em;
+    display:block;
+
+    img{ width:100%; }
 
     .title{
       position:absolute;
@@ -764,6 +767,58 @@ header.navigation {
     .title{
       opacity:1;
     }
+  }
+}
+
+#uglipop_overlay_wrapper{
+  z-index:3;
+
+  #uglipop_overlay{
+    opacity:.5;
+  }
+}
+
+#uglipop_content_fixed{
+  background:#fff;
+  z-index:4;
+  max-width:600px;
+  border-radius:4px;
+
+  .img{
+    padding:1.5em;
+    text-align:center;
+    background:#f4f5f6;
+    border-radius:4px 4px 0 0;
+
+    img{ max-height:200px; }
+  }
+
+  .info{
+    padding:1.5em;
+
+    h2{ font-size:130%; margin-bottom:1em; }
+    p{ margin-bottom:1em; }
+    ul{ margin:0 0 1em 1em; }
+    ul li{ margin:0 0 .5em; }
+  }
+
+  .button{
+    padding:.75em 1.5em;
+    text-align:right;
+    border-top:1px solid #eee;
+
+    a.btn{
+        @include button(flat, $gwp-green);
+        padding: 0.7em 1em;
+        color: $off-white;
+        text-decoration: none;
+    }
+  }
+
+  @include media(max-width 767px, 12){
+    width:90%;
+    left:5%;
+    @include transform(translate(0%, -50%));
   }
 }
 
