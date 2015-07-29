@@ -11,6 +11,12 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   color: #313030; }
+  @media screen and (min-width: 30em) {
+    body {
+      padding-top: 66px; } }
+  @media screen and (min-width: 53.75em) {
+    body {
+      padding-top: 82px; } }
 
 .img-responsive {
   max-width: 100%; }
@@ -23,7 +29,13 @@ header.navigation {
   padding: 1em; }
   @media screen and (min-width: 53.75em) {
     header.navigation {
-      margin-bottom: 1em; } }
+      margin-bottom: 1em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      background: #fff; } }
   header.navigation .navigation-menu-button {
     display: block;
     float: right;
@@ -274,7 +286,7 @@ header.navigation {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%; }
+    width: 31.76157%; }
     #testwrapper .testcol:last-child {
       margin-right: 0; }
     @media screen and (max-width: 48em) {
@@ -300,6 +312,31 @@ header.navigation {
       margin-bottom: 1.5em;
       padding-bottom: 1em;
       width: 100%; }
+      #testwrapper .testcol .comment button {
+        background-color: #96c342;
+        border-radius: 3px;
+        border: 0;
+        color: #333333;
+        display: inline-block;
+        font-size: inherit;
+        font-weight: bold;
+        padding: 7px 18px;
+        text-decoration: none;
+        background-clip: padding-box;
+        padding: 0.7em 1em;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 1em auto;
+        display: block; }
+        #testwrapper .testcol .comment button:hover:not(:disabled) {
+          background-color: #a2ce51;
+          cursor: pointer; }
+        #testwrapper .testcol .comment button:active:not(:disabled), #testwrapper .testcol .comment button:focus:not(:disabled) {
+          background-color: #87ae3d;
+          cursor: pointer; }
+        #testwrapper .testcol .comment button:disabled {
+          cursor: not-allowed;
+          opacity: 0.5; }
       #testwrapper .testcol .comment .comment-image,
       #testwrapper .testcol .comment .comment-content {
         display: block;
@@ -358,7 +395,7 @@ header.navigation {
       #abouthero .hero-inner {
         padding: 5em; } }
     #abouthero .hero-inner .hero-copy {
-      text-align: center; }
+      text-align: left; }
       #abouthero .hero-inner .hero-copy h1 {
         font-size: 1.2em;
         margin-bottom: 2em;
@@ -448,22 +485,6 @@ header.navigation {
     line-height: 1.5em;
     margin-bottom: 3em; }
 
-#team .teamintro {
-  text-align: center;
-  background: #313030;
-  color: #eeeeee; }
-  #team .teamintro h1 {
-    font-size: 2em;
-    line-height: 2em;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: inline-block; }
-  #team .teamintro img {
-    display: inline-block;
-    max-height: 4em;
-    vertical-align: bottom; }
-  #team .teamintro .teamwrap {
-    padding: 3em; }
 #team .teamGrid {
   padding: 3em;
   max-width: 68em;
@@ -525,6 +546,23 @@ header.navigation {
       font-size: .8em;
       font-weight: 100; }
 
+.capIntro {
+  text-align: center;
+  background: #313030;
+  color: #eeeeee; }
+  .capIntro h1 {
+    font-size: 2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block; }
+  .capIntro img {
+    display: inline-block;
+    max-height: 4em;
+    vertical-align: bottom; }
+  .capIntro .capWrap {
+    padding: 3em; }
+
 .serviceList {
   max-width: 68em;
   margin-left: auto;
@@ -554,15 +592,7 @@ header.navigation {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 31.76157%; }
-        .serviceList .serviceItem:last-child {
-          margin-right: 0; } }
-    @media screen and (min-width: 48em) {
-      .serviceList .serviceItem {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%; }
+        width: 23.23176%; }
         .serviceList .serviceItem:last-child {
           margin-right: 0; } }
     .serviceList .serviceItem h1 {
@@ -607,7 +637,7 @@ header.navigation {
       #serviceHero .hero-inner {
         padding: 6em; } }
     #serviceHero .hero-inner .hero-copy {
-      text-align: center; }
+      text-align: left; }
       #serviceHero .hero-inner .hero-copy h1 {
         font-size: 1.3em;
         margin-bottom: 2em;
@@ -860,7 +890,7 @@ header.navigation {
       #initHero .hero-inner {
         padding: 6em; } }
     #initHero .hero-inner .hero-copy {
-      text-align: center; }
+      text-align: left; }
       #initHero .hero-inner .hero-copy h1 {
         font-size: 1.5em;
         font-weight: 700;
@@ -906,7 +936,7 @@ header.navigation {
 .initstatement {
   font-size: 1.5em;
   margin: auto;
-  text-align: center;
+  text-align: left;
   padding: 2em;
   color: #313030;
   font-weight: 600;
@@ -915,8 +945,10 @@ header.navigation {
     text-transform: none;
     background-color: #eeeeee; }
     .initstatement.alt h2 {
-      font-size: 1em;
-      font-weight: 500; }
+      font-size: .8em;
+      font-weight: 500;
+      max-width: 90%;
+      margin: auto; }
 
 .side-image-init {
   max-width: 68em;
@@ -1105,7 +1137,7 @@ header.navigation {
     color: #eeeeee;
     margin: auto;
     padding: 2em;
-    text-align: center; }
+    text-align: left; }
     #contactHero .hero-inner::after {
       clear: both;
       content: "";
@@ -1118,7 +1150,7 @@ header.navigation {
       #contactHero .hero-inner {
         padding: 6em; } }
     #contactHero .hero-inner .hero-copy {
-      text-align: center; }
+      text-align: left; }
       #contactHero .hero-inner .hero-copy h1 {
         font-size: 1.5em;
         font-weight: 700;
@@ -1268,7 +1300,7 @@ header.navigation {
       #gotHero .hero-inner {
         padding: 6em; } }
     #gotHero .hero-inner .hero-copy {
-      text-align: center; }
+      text-align: left; }
       #gotHero .hero-inner .hero-copy h1 {
         font-size: 1.5em;
         font-weight: 700;

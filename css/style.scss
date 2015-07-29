@@ -38,6 +38,13 @@ $off-white: #eeeeee;
 body {
   font-family: 'Open Sans', sans-serif;
   color: $dark-gray;
+  @include media($small-screen){
+    padding-top:66px;
+  }
+  @include media($large-screen){
+    padding-top: 82px;
+  }
+
 }
 
 .img-responsive {
@@ -57,6 +64,12 @@ header.navigation {
   padding: 1em;
   @include media($large-screen) {
     margin-bottom: 1em;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:99;
+    background:#fff;
   }
 
   // Mobile view
@@ -326,7 +339,7 @@ header.navigation {
   @include clearfix;
   padding: 3em;
   .testcol {
-    @include span-columns(3);
+    @include span-columns(4);
     @include media(max-width $medium-screen, 12) {
       @include span-columns(6);
       &:nth-child(even) {
@@ -352,6 +365,14 @@ header.navigation {
       margin-bottom: $base-spacing;
       padding-bottom: 1em;
       width: 100%;
+      button {
+        @include button(flat, $gwp-green);
+        padding: 0.7em 1em;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 1em auto;
+        display:block;
+      }
       .comment-image,
       .comment-content {
         display: block;
@@ -426,7 +447,7 @@ header.navigation {
       padding: 5em;
     }
     .hero-copy {
-      text-align: center;
+      text-align: left;
 
       h1 {
         font-size: 1.2em;
@@ -524,30 +545,6 @@ header.navigation {
 
 //styles for team section on about page
 #team {
-  .teamintro {
-    text-align: center;
-    background: $dark-gray;
-    color: $off-white;
-    h1 {
-      font-size: 2em;
-      line-height: 2em;
-      text-transform: uppercase;
-      font-weight: 500;
-      display: inline-block;
-      //      @include media($large-screen){
-      //        font-size: 4em;
-      //        line-height: 4em;
-      //      }
-    }
-    img {
-      display: inline-block;
-      max-height: 4em;
-      vertical-align: bottom;
-    }
-    .teamwrap {
-      padding: 3em;
-    }
-  }
   .teamGrid {
     padding: 3em;
     @include outer-container;
@@ -577,7 +574,30 @@ header.navigation {
     }
   }
 }
-
+.capIntro {
+  text-align: center;
+  background: $dark-gray;
+  color: $off-white;
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    //      @include media($large-screen){
+    //        font-size: 4em;
+    //        line-height: 4em;
+    //      }
+  }
+  img {
+    display: inline-block;
+    max-height: 4em;
+    vertical-align: bottom;
+  }
+  .capWrap {
+    padding: 3em;
+  }
+}
 //services page
 .serviceList {
   @include outer-container;
@@ -589,10 +609,7 @@ header.navigation {
   .serviceItem {
     @include span-columns(12);
     @include media($large-screen) {
-      @include span-columns(4);
-    }
-    @include media($medium-screen){
-      @include span-columns(4);
+      @include span-columns(3);
     }
     padding: 2em;
     h1 {
@@ -639,7 +656,7 @@ header.navigation {
       padding: 6em;
     }
     .hero-copy {
-      text-align: center;
+      text-align: left;
 
       h1 {
         font-size: 1.3em;
@@ -843,7 +860,7 @@ header.navigation {
       padding: 6em;
     }
     .hero-copy {
-      text-align: center;
+      text-align: left;
 
       h1 {
         font-size: 1.5em;
@@ -878,7 +895,7 @@ header.navigation {
 .initstatement {
   font-size: 1.5em;
   margin: auto;
-  text-align: center;
+  text-align: left;
   padding: 2em;
   color: $dark-gray;
   font-weight: 600;
@@ -887,8 +904,10 @@ header.navigation {
     text-transform: none;
     background-color: $off-white;
     h2 {
-      font-size: 1em;
+      font-size: .8em;
       font-weight: 500;
+      max-width: 90%;
+      margin:auto;
     }
   }
 }
@@ -1075,12 +1094,12 @@ header.navigation {
     color: $hero-color;
     margin: auto;
     padding: 2em;
-    text-align: center;
+    text-align: left;
     @include media($large-screen) {
       padding: 6em;
     }
     .hero-copy {
-      text-align: center;
+      text-align: left;
 
       h1 {
         font-size: 1.5em;
@@ -1195,7 +1214,7 @@ header.navigation {
       padding: 6em;
     }
     .hero-copy {
-      text-align: center;
+      text-align: left;
 
       h1 {
         font-size: 1.5em;
