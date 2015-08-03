@@ -47,16 +47,22 @@ body {
 
 }
 
+.content{
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 2em;
+  ul{
+    padding-left:1.5em;
+  }
+}
 .img-responsive {
   max-width: 100%;
 }
 
-button {
-  a {
+a .button {
     color: $off-white;
     text-decoration: none;
   }
-}
 
 //nav styling
 header.navigation {
@@ -489,7 +495,7 @@ header.navigation {
   $base-font-color: $dark-gray !default;
 
   max-width: 68em;
-  margin: auto;
+  margin: 0 auto -5em;
 
   @include media($large-screen) {
     @include row(table);
@@ -498,7 +504,7 @@ header.navigation {
   .images-wrapper {
     display: block;
     vertical-align: middle;
-    min-height: 12em;
+    min-height: 4em;
     padding: 3em;
 
     @include media($large-screen) {
@@ -515,11 +521,11 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(7);
-      padding: 10em 4em 8em 4em;
+      padding: 8em 4em 8em 4em;
     }
     @include media($medium-screen) {
       @include span-columns(8);
-      padding: 10em 4em 8em 4em;
+      padding: 8em 4em 8em 4em;
     }
   }
 
@@ -1347,13 +1353,11 @@ header.navigation {
         display: block;
       }
     }
-    button {
+    .button {
       @include button(flat, $gwp-orange);
       padding: 0.7em 1em;
       display: inline-block;
-      a {
         color: $dark-gray;
-      }
     }
   }
 

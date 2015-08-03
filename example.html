@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Glass Web Projects</title>
+    <title>Sustainability Examples</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="css/reset.css"/>
@@ -17,6 +17,7 @@
         new WOW().init();
     </script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 <header class="navigation" role="banner">
@@ -27,56 +28,48 @@
         <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars fa-2x"></i></a>
         <nav role="navigation">
             <ul id="js-navigation-menu" class="navigation-menu show">
-                <li class="nav-link"><a href="about">About</a></li>
+                <li class="nav-link"><a href="javascript:void(0)" class="active" >About</a></li>
                 <li class="nav-link"><a href="portfolio">Portfolio</a></li>
                 <li class="nav-link"><a href="initiatives">Initiatives</a></li>
-                <li class="nav-link"><a href="contact" class="active" >Contact</a></li>
+                <li class="nav-link"><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
-<div id="contactHero">
-    <div class="hero-inner">
-        <div class="hero-copy">
-            <h1>Contact Us</h1>
-            <h2>Interested in opportunities with Glass Web Projects? Want to suggest a partnership? Maybe you want to just talk business and need someone to bounce off ideas with. Either way, we'd love to hear from you- drop us a line below!</h2>
-        </div>
+
+
+
+
+<div class="capIntro">
+    <div class="capWrap">
+        <img src="resources/images/rings.png" class="img-responsive" alt="GWP Rings" />
+        <h1>Sustainability Examples</h1>
     </div>
 </div>
-<div id="formContainer">
-    <div id="contactForm">
-        <form class="form" action="" method="post" id="contact">
-            <div class="alert"></div>
-            <div class="content">
-                <div class="field">
-                    <label>Name</label>
-                    <input type="text" placeholder="Name" name="contactName" id="contactName" />
-                </div>
-                <div class="field">
-                    <label>Email</label>
-                    <input type="text" placeholder="Email" name="contactEmail" id="contactEmail" />
-                </div>
-                <div class="field">
-                    <label>What's on your mind?</label>
-                    <textarea name="contactMessage" id="contactMessage"></textarea>
-                </div>
-                <div class="field">
-                    <label>How did you hear about us?</label>
-                    <input type="text" name="contactReferral" id="contactReferral" />
-                </div>
-                <input type="hidden" name="_subject" value="Website Contact Submission" />
-                <input type="text" name="_gotcha" style="display:none" />
-                <div class="field align-right">
-                    <button type="submit" class="btn" name="submit">Send Message</button>
-                </div>
-            </div>
-        </form>
-    </div>
+<div class="content">
+    <p>Here's a short list of some ways that your organization may be sustainable, but the possibilities are endless.</p>
+    <h1>Environmental</h1>
+    <ul>
+        <li>Using at least 75% renewable electricity source, such as wind or water</li>
+        <li>Subscribing to a recycling program that takes paper, plastic, glass or aluminum</li>
+        <li>Purchasing environmentally-friendly cleaning products</li>
+        <li>Recycling in your office</li>
+        <li>Utilizing re-purposed materials or goods</li>
+        <li>Reducing your carbon footprint</li>
+        <li>Donating to other Green or sustainable local business</li>
+        <li>Reducing your carbon footprint</li>
+        <li>Having an energy audit at your office location</li>
+        <li>Instituting an employee biking program or carpooling program to encourage air quality and less consumption of non-renewable resources</li>
+    <li>Building or improving your office location using Green Building practices</li>
+    </ul>
+
 </div>
 
 
 
-<div class="lowerContent noTop">
+
+
+<div class="lowerContent">
     <div class="gotProj">
         <div class="projIcon">
             <img src="resources/images/project.png" class="img-responsive" />
@@ -97,22 +90,21 @@
         </div>
     </div>
 </div>
+
 <footer class="footer" role="contentinfo">
     <div class="footer-logo">
         <img src="resources/images/rings.png" alt="Logo image">
     </div>
     <div class="footer-links">
         <section><ul>
-            <li><a href="about">About</a></li>
+            <li><a href="javascript:void(0)">About</a></li>
             <li><a href="services">Services</a></li>
             <li><a href="initiatives">Initiatives</a></li>
             <li><a href="contact">Contact</a></li>
         </ul></section>
-        <section>
-            <ul>
-                <li><a href="https://www.facebook.com/glasswebprojects"><i class="fa fa-facebook-square fa-4x fa-inverse"></i></a><a href="https://twitter.com/glasswebprojcts"><i class="fa fa-twitter-square fa-4x fa-inverse"></i></a></li>
-            </ul>
-        </section>
+        <section><ul>
+            <li><a href="https://www.facebook.com/glasswebprojects"><i class="fa fa-facebook-square fa-4x fa-inverse"></i></a><a href="https://twitter.com/glasswebprojcts"><i class="fa fa-twitter-square fa-4x fa-inverse"></i></a></li>
+        </ul></section>
         <section>
             <p>Glass Web Projects is a full-service creative web firm for sustainable organizations. We are committed to creating positive environmental and social change while providing unparalleled support to our clients.</p>
         </section>
@@ -125,26 +117,6 @@
         &copy; 2015 Glass Web Projects
     </p>
 </footer>
-<script>
-    $(function(){
-        $('form#contact').submit(function(e){
-            var self = $(this);
-
-            $.ajax({
-                url:'//formspree.io/chaniemobley@gmail.com',
-                type:'POST',
-                data:self.serialize(),
-                dataType:'json',
-                success:function(){
-                    console.log('submitted');
-                    $('.alert',self).addClass('success').html('<p>Thanks for reaching out!  I\'ll be in touch.</p>');
-                    self[0].reset();
-                }
-            });
-
-            e.preventDefault();
-        });
-    });
-</script>
 </body>
+
 </html>

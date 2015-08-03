@@ -18,10 +18,17 @@ body {
     body {
       padding-top: 82px; } }
 
+.content {
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 2em; }
+  .content ul {
+    padding-left: 1.5em; }
+
 .img-responsive {
   max-width: 100%; }
 
-button a {
+a .button {
   color: #eeeeee;
   text-decoration: none; }
 
@@ -439,7 +446,7 @@ header.navigation {
 
 .side-image {
   max-width: 68em;
-  margin: auto; }
+  margin: 0 auto -5em; }
   @media screen and (min-width: 53.75em) {
     .side-image {
       display: table;
@@ -448,7 +455,7 @@ header.navigation {
   .side-image .images-wrapper {
     display: block;
     vertical-align: middle;
-    min-height: 12em;
+    min-height: 4em;
     padding: 3em; }
     @media screen and (min-width: 53.75em) {
       .side-image .images-wrapper {
@@ -466,12 +473,12 @@ header.navigation {
       .side-image .side-image-content {
         display: table-cell;
         width: 58.33333%;
-        padding: 10em 4em 8em 4em; } }
+        padding: 8em 4em 8em 4em; } }
     @media screen and (min-width: 48em) {
       .side-image .side-image-content {
         display: table-cell;
         width: 66.66667%;
-        padding: 10em 4em 8em 4em; } }
+        padding: 8em 4em 8em 4em; } }
   .side-image h1 {
     margin-bottom: 0.9em;
     font-size: 1.6em;
@@ -1469,7 +1476,7 @@ header.navigation {
         font-weight: 300;
         padding: 1em;
         display: block; }
-    .lowerContent .gotProj button {
+    .lowerContent .gotProj .button {
       background-color: #f29621;
       border-radius: 3px;
       border: 0;
@@ -1481,18 +1488,17 @@ header.navigation {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em;
-      display: inline-block; }
-      .lowerContent .gotProj button:hover:not(:disabled) {
+      display: inline-block;
+      color: #313030; }
+      .lowerContent .gotProj .button:hover:not(:disabled) {
         background-color: #f8a235;
         cursor: pointer; }
-      .lowerContent .gotProj button:active:not(:disabled), .lowerContent .gotProj button:focus:not(:disabled) {
+      .lowerContent .gotProj .button:active:not(:disabled), .lowerContent .gotProj .button:focus:not(:disabled) {
         background-color: #e78913;
         cursor: pointer; }
-      .lowerContent .gotProj button:disabled {
+      .lowerContent .gotProj .button:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .lowerContent .gotProj button a {
-        color: #313030; }
   .lowerContent .signUp {
     float: left;
     display: block;
