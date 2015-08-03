@@ -319,7 +319,7 @@ header.navigation {
       margin-bottom: 1.5em;
       padding-bottom: 1em;
       width: 100%; }
-      #testwrapper .testcol .comment button {
+      #testwrapper .testcol .comment .button {
         background-color: #96c342;
         border-radius: 3px;
         border: 0;
@@ -334,14 +334,16 @@ header.navigation {
         color: #ffffff;
         font-weight: 300;
         margin: 1em auto;
-        display: block; }
-        #testwrapper .testcol .comment button:hover:not(:disabled) {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center; }
+        #testwrapper .testcol .comment .button:hover:not(:disabled) {
           background-color: #a2ce51;
           cursor: pointer; }
-        #testwrapper .testcol .comment button:active:not(:disabled), #testwrapper .testcol .comment button:focus:not(:disabled) {
+        #testwrapper .testcol .comment .button:active:not(:disabled), #testwrapper .testcol .comment .button:focus:not(:disabled) {
           background-color: #87ae3d;
           cursor: pointer; }
-        #testwrapper .testcol .comment button:disabled {
+        #testwrapper .testcol .comment .button:disabled {
           cursor: not-allowed;
           opacity: 0.5; }
       #testwrapper .testcol .comment .comment-image,
